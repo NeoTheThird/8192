@@ -11,5 +11,5 @@
     },
     "version": "0.1",
     "maintainer": "Jan Sprinz <neo@neothethird.de>",
-    "framework" : "ubuntu-sdk-15.04.7"
+    "framework" : "ubuntu-sdk-15.04.6"
 }
