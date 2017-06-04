@@ -1,0 +1,15 @@
+{
+    "name": "8192.neothethird",
+    "description": "A game. About squares.",
+    "architecture": "@CLICK_ARCH@",
+    "title": "8192",
+    "hooks": {
+        "8192": {
+            "apparmor": "8192.apparmor",
+            "desktop":  "8192.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Jan Sprinz <neo@neothethird.de>",
+    "framework" : "ubuntu-sdk-15.04.7"
+}

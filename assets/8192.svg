@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="256mm"
+   width="256mm"
+   viewBox="0 0 907.08661 907.08661"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="8192.svg"
+   inkscape:export-filename="8192.png"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1358"
+     inkscape:window-height="1028"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="0.5875"
+     inkscape:cx="306.8215"
+     inkscape:cy="461.15284"
+     inkscape:window-x="75"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2"
+     showguides="false" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="fill:#e95420;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="rect3228"
+     width="907.03766"
+     height="907.03766"
+     x="0"
+     y="0.048987206" />
+  <rect
+     style="fill:#772953;fill-opacity:0.58823529;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="rect3228-7"
+     width="907.03766"
+     height="442.13214"
+     x="0"
+     y="0.048952427" />
+  <rect
+     style="fill:#772953;fill-opacity:0.78431374;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="rect3228-7-5"
+     width="814.48578"
+     height="1091.2782"
+     x="-103.01203"
+     y="0.058935568"
+     transform="matrix(1,0,-0.55601849,0.83116992,0,0)" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3385"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:475px;line-height:89.99999762%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(0,128)"><flowRegion
+       id="flowRegion3387"><rect
+         id="rect3389"
+         width="905.12823"
+         height="900"
+         x="2.5641005"
+         y="-0.60569215"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:475px;line-height:89.99999762%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle" /></flowRegion><flowPara
+       id="flowPara3393"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:400px;line-height:89.99999762%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:1.25px;text-anchor:middle;fill:#ffffff;fill-opacity:0.9748428">81</flowPara><flowPara
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:400px;line-height:89.99999762%;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:1.25px;text-anchor:middle;fill:#ffffff;fill-opacity:0.9748428"
+       id="flowPara3204">92</flowPara></flowRoot>  <rect
+     style="fill:#772953;fill-opacity:0.78431373;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="rect3228-7-5-3"
+     width="814.48578"
+     height="1091.2782"
+     x="1319.9625"
+     y="0.058953218"
+     transform="matrix(1,0,-0.55601849,0.83116992,0,0)" />
+  <rect
+     style="fill:#772953;fill-opacity:0.78431373;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="rect3228-7-5-6"
+     width="814.48578"
+     height="1091.2782"
+     x="-578.71826"
+     y="0.058953218"
+     transform="matrix(1,0,-0.55601849,0.83116992,0,0)" />
+</svg>
