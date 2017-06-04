@@ -1,7 +1,6 @@
 {
     "name": "8192.neothethird",
     "description": "A game. About squares.",
-    "architecture": "@CLICK_ARCH@",
     "title": "8192",
     "hooks": {
         "8192": {
