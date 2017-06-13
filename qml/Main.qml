@@ -36,7 +36,7 @@ MainView {
     applicationName: "8192.neothethird"
     focus: true
 
-    property string version: "0.1"
+    property string version: "0.2"
 
     property bool activeState: Qt.application.active
 
