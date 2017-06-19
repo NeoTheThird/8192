@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 8192\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-14 02:10+0200\n"
+"PO-Revision-Date: 2017-06-14 03:19+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ca\n"
+
+#: ../qml/Main.qml:79
+msgid "Welcome to 8192"
+msgstr "Benvingut al 8192"
+
+#: ../qml/Main.qml:123
+msgid "YOUR SCORE"
+msgstr "LA VOSTRA PUNTUACIÓ"
+
+#: ../qml/Main.qml:129
+msgid "HIGHSCORE"
+msgstr "RÈCORD"
+
+#: ../qml/Main.qml:160 ../qml/Main.qml:195 ../qml/Main.qml:228
+#: ../qml/Main.qml:248
+msgid "Restart"
+msgstr "Reinicia"
+
+#: ../qml/Main.qml:168
+msgid "About"
+msgstr "Quant a"
+
+#: ../qml/Main.qml:196
+msgid "Are you sure you want to restart the game?"
+msgstr "Esteu segur de que voleu reiniciar el joc?"
+
+#: ../qml/Main.qml:198
+msgid "Yes"
+msgstr "Sí"
+
+#: ../qml/Main.qml:205
+msgid "No"
+msgstr "No"
+
+#: ../qml/Main.qml:220
+msgid "Victory"
+msgstr "Victòria"
+
+#: ../qml/Main.qml:222
+msgid "Keep going"
+msgstr "Continua"
+
+#: ../qml/Main.qml:244
+msgid "Game over. :("
+msgstr "Heu perdut :("
+
+#: ../qml/Main.qml:245
+msgid "Score"
+msgstr "Puntuació"
+
+#: ../qml/Main.qml:256
+msgid "Quit"
+msgstr "Sortir"
+
+#: ../qml/Main.qml:272
+msgid "8182"
+msgstr "8182"
+
+#: ../qml/Main.qml:273
+msgid "<b>Version:</b> "
+msgstr "<b>Versió:</b> "
+
+#: ../qml/Main.qml:273
+msgid ""
+"<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
+"\"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy "
+"this game and you ever happen to meet them, please consider treating them "
+"for a decent cup of coffee, they really deserve it!<br><br><b>Copyright (c) "
+"2017 Jan Sprinz<br>neo@neothethird.de</b>"
+msgstr ""
+"<br><br>Aquest joc ha estat copiat vergonyosament del «2048» del Gabriele "
+"Cirulli, que es va inspirar en el joc «1024» del Jason Saxon. Si gaudiu "
+"d'aquest joc i us trobau qualcún d'ells, considerau l'opció de convidar-los "
+"a una tassa de cafè decent, s'ho mereixen de debò!<br><br><b>Copyright (c) "
+"2017 Jan Sprinz<br>neo@neothethird.de</b>"
+
+#: ../qml/Main.qml:276
+msgid "Donate"
+msgstr "Doneu"
+
+#: ../qml/Main.qml:283
+msgid "Report a bug"
+msgstr "Reporteu un error"
+
+#: ../qml/Main.qml:291
+msgid "Close"
+msgstr "Tanca"
+
+#: 8192.desktop.in.h:1
+msgid "8192"
+msgstr "8192"
