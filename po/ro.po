@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Romanian language with diacritics (Română)
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2017-06-04 18:24+0000\n"
 "PO-Revision-Date: 2017-06-19 23:15+0000\n"
 "Last-Translator: Brinzariu Cristian <info@ebeton.ro>\n"
-"Language-Team: Romanian <info@ebeton.ro>\n"
+"Language-Team: Romanian with diacritics (Română) <info@ebeton.ro>\n"
 "Language: Ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr "Bine ai venit la 8192"
 
 #: ../qml/Main.qml:123
 msgid "YOUR SCORE"
-msgstr "SCORUL TAU"
+msgstr "SCORUL TÂU"
 
 #: ../qml/Main.qml:129
 msgid "HIGHSCORE"
@@ -32,7 +32,7 @@ msgstr "CEL MAI BUN SCOR"
 #: ../qml/Main.qml:160 ../qml/Main.qml:195 ../qml/Main.qml:228
 #: ../qml/Main.qml:248
 msgid "Restart"
-msgstr "Reincepe"
+msgstr "Reîncepe"
 
 #: ../qml/Main.qml:168
 msgid "About"
@@ -40,7 +40,7 @@ msgstr "Despre"
 
 #: ../qml/Main.qml:196
 msgid "Are you sure you want to restart the game?"
-msgstr "Esti sigur ca vrei sa incerci din nou?"
+msgstr "Eşti sigur că vrei să încerci din nou?"
 
 #: ../qml/Main.qml:198
 msgid "Yes"
@@ -48,7 +48,7 @@ msgstr "Da"
 
 #: ../qml/Main.qml:205
 msgid "No"
-msgstr "Non"
+msgstr "Nu"
 
 #: ../qml/Main.qml:220
 msgid "Victory"
@@ -56,7 +56,7 @@ msgstr "Victorie"
 
 #: ../qml/Main.qml:222
 msgid "Keep going"
-msgstr "Continua"
+msgstr "Continuă"
 
 #: ../qml/Main.qml:244
 msgid "Game over. :("
@@ -68,7 +68,7 @@ msgstr "Scor"
 
 #: ../qml/Main.qml:256
 msgid "Quit"
-msgstr "Inchide"
+msgstr "Închide"
 
 #: ../qml/Main.qml:272
 msgid "8182"
@@ -87,22 +87,22 @@ msgid ""
 "2017 Jan Sprinz<br>neo@neothethird.de</b>"
 msgstr ""
 "<br><br>Acest joc este o versiune a jocului \"2048\" a lui Gabriele Cirulli "
-"care de asemenea a fost inspirat de jocul \"1024!\" a lui Jason Saxon. Asa ca daca "
-"va placut acest joc si se intampla sa ii intalniti luati in considerare sa le "
-"faceti cinste cu o cafea, O merita din plin!<br><br><b>Copyright (c) "
+"care de asemenea a fost inspirat de jocul \"1024!\" a lui Jason Saxon. Aşa că dacă "
+"va plăcut acest joc şi se întâmplă să îi întâlniţi luaţi în considerare să le "
+"faceţi cinste cu o cafea, O merită din plin!<br><br><b>Copyright (c) "
 "2017 Jan Sprinz<br>neo@neothethird.de</b>"
 
 #: ../qml/Main.qml:276
 msgid "Donate"
-msgstr "Donati"
+msgstr "Donaţi"
 
 #: ../qml/Main.qml:283
 msgid "Report a bug"
-msgstr "Raportati un bug"
+msgstr "Raportaţi o problemă"
 
 #: ../qml/Main.qml:291
 msgid "Close"
-msgstr "Inchide"
+msgstr "Închide"
 
 #: 8192.desktop.in.h:1
 msgid "8192"
