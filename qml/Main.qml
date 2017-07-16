@@ -131,7 +131,7 @@ MainView {
                 }
             }
 
-            GameLogic {
+            Game_8192 {
                 id: game
                 width: gameColumn.width
 
