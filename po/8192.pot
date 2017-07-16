@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-13 23:26+0000\n"
+"POT-Creation-Date: 2017-07-16 12:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,21 +70,20 @@ msgstr ""
 msgid "Quit"
 msgstr ""
 
-#: ../qml/Main.qml:272
-msgid "8182"
-msgstr ""
-
 #: ../qml/Main.qml:273
-msgid "<b>Version:</b> "
+msgid "Version"
 msgstr ""
 
 #: ../qml/Main.qml:273
 msgid ""
-"<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
-"\"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy "
-"this game and you ever happen to meet them, please consider treating them "
-"for a decent cup of coffee, they really deserve it!<br><br><b>Copyright (c) "
-"2017 Jan Sprinz<br>neo@neothethird.de</b>"
+"This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
+"which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
+"and you ever happen to meet them, please consider treating them for a decent "
+"cup of coffee, they really deserve it!"
+msgstr ""
+
+#: ../qml/Main.qml:273
+msgid "Copyright"
 msgstr ""
 
 #: ../qml/Main.qml:276

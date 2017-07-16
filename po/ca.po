@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-14 02:10+0200\n"
-"PO-Revision-Date: 2017-06-14 03:19+0200\n"
+"POT-Creation-Date: 2017-07-16 14:08+0200\n"
+"PO-Revision-Date: 2017-07-16 14:08+0200\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: \n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7.1\n"
-"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: ca\n"
 
 #: ../qml/Main.qml:79
 msgid "Welcome to 8192"
@@ -71,27 +71,21 @@ msgstr "Puntuació"
 msgid "Quit"
 msgstr "Sortir"
 
-#: ../qml/Main.qml:272
-msgid "8182"
-msgstr "8182"
-
 #: ../qml/Main.qml:273
-msgid "<b>Version:</b> "
-msgstr "<b>Versió:</b> "
+msgid "Version"
+msgstr ""
 
 #: ../qml/Main.qml:273
 msgid ""
-"<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
-"\"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy "
-"this game and you ever happen to meet them, please consider treating them "
-"for a decent cup of coffee, they really deserve it!<br><br><b>Copyright (c) "
-"2017 Jan Sprinz<br>neo@neothethird.de</b>"
+"This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
+"which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
+"and you ever happen to meet them, please consider treating them for a decent "
+"cup of coffee, they really deserve it!"
 msgstr ""
-"<br><br>Aquest joc ha estat copiat vergonyosament del «2048» del Gabriele "
-"Cirulli, que es va inspirar en el joc «1024» del Jason Saxon. Si gaudiu "
-"d'aquest joc i us trobau qualcún d'ells, considerau l'opció de convidar-los "
-"a una tassa de cafè decent, s'ho mereixen de debò!<br><br><b>Copyright (c) "
-"2017 Jan Sprinz<br>neo@neothethird.de</b>"
+
+#: ../qml/Main.qml:273
+msgid "Copyright"
+msgstr ""
 
 #: ../qml/Main.qml:276
 msgid "Donate"
@@ -108,3 +102,22 @@ msgstr "Tanca"
 #: 8192.desktop.in.h:1
 msgid "8192"
 msgstr "8192"
+
+#~ msgid "8182"
+#~ msgstr "8182"
+
+#~ msgid "<b>Version:</b> "
+#~ msgstr "<b>Versió:</b> "
+
+#~ msgid ""
+#~ "<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
+#~ "\"2048\", which was inspired by Jason Saxon's game \"1024!\". If you "
+#~ "enjoy this game and you ever happen to meet them, please consider "
+#~ "treating them for a decent cup of coffee, they really deserve it!"
+#~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"
+#~ msgstr ""
+#~ "<br><br>Aquest joc ha estat copiat vergonyosament del «2048» del Gabriele "
+#~ "Cirulli, que es va inspirar en el joc «1024» del Jason Saxon. Si gaudiu "
+#~ "d'aquest joc i us trobau qualcún d'ells, considerau l'opció de convidar-"
+#~ "los a una tassa de cafè decent, s'ho mereixen de debò!"
+#~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"
