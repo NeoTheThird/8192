@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-16 12:34+0000\n"
+"POT-Creation-Date: 2017-07-16 22:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,64 +17,64 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:79
+#: ../qml/Main.qml:72
 msgid "Welcome to 8192"
 msgstr ""
 
-#: ../qml/Main.qml:123
+#: ../qml/Main.qml:116
 msgid "YOUR SCORE"
 msgstr ""
 
-#: ../qml/Main.qml:129
+#: ../qml/Main.qml:122
 msgid "HIGHSCORE"
 msgstr ""
 
-#: ../qml/Main.qml:160 ../qml/Main.qml:195 ../qml/Main.qml:228
-#: ../qml/Main.qml:248
+#: ../qml/Main.qml:152 ../qml/Main.qml:187 ../qml/Main.qml:220
+#: ../qml/Main.qml:240
 msgid "Restart"
 msgstr ""
 
-#: ../qml/Main.qml:168
+#: ../qml/Main.qml:160
 msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:196
+#: ../qml/Main.qml:188
 msgid "Are you sure you want to restart the game?"
 msgstr ""
 
-#: ../qml/Main.qml:198
+#: ../qml/Main.qml:190
 msgid "Yes"
 msgstr ""
 
-#: ../qml/Main.qml:205
+#: ../qml/Main.qml:197
 msgid "No"
 msgstr ""
 
-#: ../qml/Main.qml:220
+#: ../qml/Main.qml:212
 msgid "Victory"
 msgstr ""
 
-#: ../qml/Main.qml:222
+#: ../qml/Main.qml:214
 msgid "Keep going"
 msgstr ""
 
-#: ../qml/Main.qml:244
+#: ../qml/Main.qml:236
 msgid "Game over. :("
 msgstr ""
 
-#: ../qml/Main.qml:245
+#: ../qml/Main.qml:237
 msgid "Score"
 msgstr ""
 
-#: ../qml/Main.qml:256
+#: ../qml/Main.qml:248
 msgid "Quit"
 msgstr ""
 
-#: ../qml/Main.qml:273
+#: ../qml/Main.qml:265
 msgid "Version"
 msgstr ""
 
-#: ../qml/Main.qml:273
+#: ../qml/Main.qml:265
 msgid ""
 "This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
 "which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
@@ -82,19 +82,19 @@ msgid ""
 "cup of coffee, they really deserve it!"
 msgstr ""
 
-#: ../qml/Main.qml:273
+#: ../qml/Main.qml:265
 msgid "Copyright"
 msgstr ""
 
-#: ../qml/Main.qml:276
+#: ../qml/Main.qml:268
 msgid "Donate"
 msgstr ""
 
-#: ../qml/Main.qml:283
+#: ../qml/Main.qml:275
 msgid "Report a bug"
 msgstr ""
 
-#: ../qml/Main.qml:291
+#: ../qml/Main.qml:283
 msgid "Close"
 msgstr ""
 

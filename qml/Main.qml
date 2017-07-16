@@ -26,8 +26,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.0
-import U1db 1.0 as U1db
-
+import Qt.labs.settings 1.0
 import "modules"
 
 MainView {
@@ -37,36 +36,30 @@ MainView {
     focus: true
 
     property string version: "0.2"
-
     property bool activeState: Qt.application.active
+    property bool firstStart: true
 
-    onActiveStateChanged: saveGame()
-    Component.onDestruction: saveGame()
-
-    function saveGame() {
-        gameDoc.contents = { 'numbers': game.saveNumbers(), 'score': game.score, 'won': game.won }
-        highscoreDoc.contents = { 'highscore': game.highscore }
+    Component.onCompleted: {
+        console.log("8192 started")
     }
 
-    U1db.Database {
-        id: db
-        path: "8192"
+    Component.onDestruction: {
+        console.log("8192 closed")
     }
 
-    U1db.Document {
-        id: gameDoc
-        docId: 'game'
-        database: db
-        create: true
-        defaults: { 'numbers': [], 'score': 0, 'won': false }
+    Settings {
+        category: "General"
+        property alias firstStart: mainView.firstStart
     }
 
-    U1db.Document {
-        id: highscoreDoc
-        docId: 'highscore'
-        database: db
-        create: true
-        defaults: { 'highscore': 0 }
+    Settings {
+        category: "Game"
+        property alias boardString: game.boardString
+        property alias cols: game.cols
+        property alias rows: game.rows
+        property alias score: game.score
+        property alias highscore: game.highscore
+        property alias won: game.won
     }
 
     Page {
@@ -135,18 +128,17 @@ MainView {
                 id: game
                 width: gameColumn.width
 
-                property int highscore: highscoreDoc.contents.highscore
-
-                StateSaver.properties: "savedNumbers, score, won, highscore"
-
                 onVictory: winTimer.start()
                 onDefeat: failTimer.start()
                 onScoreChanged: if (score > highscore) highscore = score
 
                 Component.onCompleted: {
-                    if (gameDoc.contents.numbers.length != 0 && gameDoc.contents != undefined) load()
-                    else if (savedNumbers.length != 0) loadSavedState()
-                    else purge()
+                    if(mainView.firstStart) {
+                        purge()
+                        mainView.firstStart = false
+                    } else {
+                        load()
+                    }
                 }
             }
 
