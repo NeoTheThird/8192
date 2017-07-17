@@ -26,289 +26,302 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.0
-import U1db 1.0 as U1db
-
+import Qt.labs.settings 1.0
+import QtQuick.Window 2.2
 import "modules"
 
-MainView {
-    id: mainView
-    objectName: "mainView"
-    applicationName: "8192.neothethird"
-    focus: true
+Window {
+    id: mainWindow
+    title: "Welcome to UBports"
+    width: units.gu(360)
+    height: units.gu(530)
+    minimumWidth: units.gu(45)
+    minimumHeight: units.gu(45)
+    maximumWidth: Screen.width
+    maximumHeight: Screen.height
 
-    property string version: "0.2"
+    MainView {
+        id: mainView
+        objectName: "mainView"
+        applicationName: "8192.neothethird"
+        focus: true
+        automaticOrientation: true
+        anchorToKeyboard: true
+        anchors.fill: parent
 
-    property bool activeState: Qt.application.active
 
-    onActiveStateChanged: saveGame()
-    Component.onDestruction: saveGame()
+        property string version: "0.2"
+        property bool activeState: Qt.application.active
+        property bool firstStart: true
 
-    function saveGame() {
-        gameDoc.contents = { 'numbers': game.saveNumbers(), 'score': game.score, 'won': game.won }
-        highscoreDoc.contents = { 'highscore': game.highscore }
-    }
-
-    U1db.Database {
-        id: db
-        path: "8192"
-    }
-
-    U1db.Document {
-        id: gameDoc
-        docId: 'game'
-        database: db
-        create: true
-        defaults: { 'numbers': [], 'score': 0, 'won': false }
-    }
-
-    U1db.Document {
-        id: highscoreDoc
-        docId: 'highscore'
-        database: db
-        create: true
-        defaults: { 'highscore': 0 }
-    }
-
-    Page {
-        id: gamePage
-        title: "8192"
-        visible: true
-
-        header: PageHeader {
-            id: pageHeader
-            title: i18n.tr("Welcome to 8192")
-            StyleHints {
-                foregroundColor: UbuntuColors.orange
-                backgroundColor: UbuntuColors.porcelain
-                dividerColor: UbuntuColors.slate
-            }
+        Component.onCompleted: {
+            console.log("8192 started")
         }
 
-        Column {
-            id: gameColumn
-            width: parent.width - units.gu(2)
-            height: width * 1.5
-            anchors.fill: parent
-            anchors.topMargin: units.gu(7)
-            anchors.leftMargin: units.gu(1)
-            anchors.rightMargin: units.gu(1)
-            anchors.bottomMargin: units.gu(1)
-            spacing: units.gu(1)
+        Component.onDestruction: {
+            console.log("8192 closed")
+        }
 
-            Row {
-                id: topMenue
-                width: parent.width
-                height: parent.height / 9
+        Settings {
+            category: "General"
+            property alias firstStart: mainView.firstStart
+        }
+
+        Settings {
+            category: "Window"
+            property alias width: mainWindow.width
+            property alias height: mainWindow.height
+        }
+
+        Settings {
+            category: "Game"
+            property alias boardString: game.boardString
+            property alias cols: game.cols
+            property alias rows: game.rows
+            property alias score: game.score
+            property alias highscore: game.highscore
+            property alias won: game.won
+        }
+
+        Page {
+            id: gamePage
+            title: "8192"
+            visible: true
+
+            header: PageHeader {
+                id: pageHeader
+                title: i18n.tr("Welcome to 8192")
+                StyleHints {
+                    foregroundColor: UbuntuColors.orange
+                    backgroundColor: UbuntuColors.porcelain
+                    dividerColor: UbuntuColors.slate
+                }
+            }
+
+            Column {
+                id: gameColumn
+                width: parent.width - units.gu(2)
+                height: width * 1.5
+                anchors.fill: parent
+                anchors.topMargin: units.gu(7)
+                anchors.leftMargin: units.gu(1)
+                anchors.rightMargin: units.gu(1)
+                anchors.bottomMargin: units.gu(1)
                 spacing: units.gu(1)
 
-                UbuntuShape {
-                    id: logo
-                    width: parent.height
-                    height: width
-                    source: Image {
-                        source: "../assets/logo.png"
+                Row {
+                    id: topMenue
+                    width: parent.width
+                    height: parent.height / 9
+                    spacing: units.gu(1)
+
+                    UbuntuShape {
+                        id: logo
+                        width: parent.height
+                        height: width
+                        source: Image {
+                            source: "../assets/logo.png"
+                        }
+                    }
+
+                    Column {
+                        id: scores
+                        width: parent.width - parent.height - units.gu(1)
+                        height: parent.height
+                        spacing: units.gu(1)
+
+                        Button {
+                            width: parent.width
+                            height: (parent.height - parent.spacing) / 2
+                            color: UbuntuColors.warmGrey
+                            text: "<center><small>" + i18n.tr("YOUR SCORE") + ":</small> <b>" + game.score + "</b></center>"
+                        }
+                        Button {
+                            width: parent.width
+                            height: (parent.height - parent.spacing) / 2
+                            color: UbuntuColors.warmGrey
+                            text: "<center><small>" + i18n.tr("HIGHSCORE") + ":</small> <b>" + game.highscore + "</b></center>"
+                        }
                     }
                 }
 
-                Column {
-                    id: scores
-                    width: parent.width - parent.height - units.gu(1)
-                    height: parent.height
+                Game_8192 {
+                    id: game
+                    width: gameColumn.width
+
+                    onVictory: winTimer.start()
+                    onDefeat: failTimer.start()
+                    onScoreChanged: if (score > highscore) highscore = score
+
+                    Component.onCompleted: {
+                        if(mainView.firstStart) {
+                            purge()
+                            mainView.firstStart = false
+                        } else {
+                            load()
+                        }
+                    }
+                }
+
+                Row {
+                    id: controls
+                    width: game.width
+                    height: units.gu(6)
                     spacing: units.gu(1)
 
                     Button {
-                        width: parent.width
-                        height: (parent.height - parent.spacing) / 2
+                        text: i18n.tr("Restart")
+                        width: (parent.width - units.gu(1)) / 2
+                        height: parent.height
                         color: UbuntuColors.warmGrey
-                        text: "<center><small>" + i18n.tr("YOUR SCORE") + ":</small> <b>" + game.score + "</b></center>"
+                        onClicked: PopupUtils.open(restartDiaComponent)
+                    }
+
+                    Button {
+                        text: i18n.tr("About")
+                        width: (parent.width - units.gu(1)) / 2
+                        height: parent.height
+                        color: UbuntuColors.warmGrey
+                        onClicked: PopupUtils.open(aboutDiaComponent)
+                    }
+                }
+            }
+
+            Timer {
+                id: winTimer
+                running: false
+                interval: 300
+                onTriggered: PopupUtils.open(victoryDiaComponent)
+            }
+
+            Timer {
+                id: failTimer
+                running: false
+                interval: 600
+                onTriggered: PopupUtils.open(defeatDiaComponent)
+            }
+
+            Component {
+                id: restartDiaComponent
+                Dialog {
+                    id: restartDia
+                    title: i18n.tr("Restart")
+                    text: i18n.tr("Are you sure you want to restart the game?")
+                    Button {
+                        text: i18n.tr("Yes")
+                        onClicked: {
+                            game.purge()
+                            PopupUtils.close(restartDia)
+                        }
                     }
                     Button {
-                        width: parent.width
-                        height: (parent.height - parent.spacing) / 2
+                        text: i18n.tr("No")
                         color: UbuntuColors.warmGrey
-                        text: "<center><small>" + i18n.tr("HIGHSCORE") + ":</small> <b>" + game.highscore + "</b></center>"
+                        onClicked: {
+                            PopupUtils.close(restartDia)
+                        }
                     }
+                    Component.onCompleted: mainView.focus = false
+                    Component.onDestruction: mainView.focus = true
                 }
             }
 
-            GameLogic {
-                id: game
-                width: gameColumn.width
-
-                property int highscore: highscoreDoc.contents.highscore
-
-                StateSaver.properties: "savedNumbers, score, won, highscore"
-
-                onVictory: winTimer.start()
-                onDefeat: failTimer.start()
-                onScoreChanged: if (score > highscore) highscore = score
-
-                Component.onCompleted: {
-                    if (gameDoc.contents.numbers.length != 0 && gameDoc.contents != undefined) load()
-                    else if (savedNumbers.length != 0) loadSavedState()
-                    else purge()
+            Component {
+                id: victoryDiaComponent
+                Dialog {
+                    id: victoryDia
+                    title: i18n.tr("Victory")
+                    Button {
+                        text: i18n.tr("Keep going")
+                        onClicked: {
+                            PopupUtils.close(victoryDia)
+                        }
+                    }
+                    Button {
+                        text: i18n.tr("Restart")
+                        color: UbuntuColors.warmGrey
+                        onClicked: {
+                            game.purge()
+                            PopupUtils.close(victoryDia)
+                        }
+                    }
+                    Component.onCompleted: mainView.focus = false
+                    Component.onDestruction: mainView.focus = true
                 }
             }
 
-            Row {
-                id: controls
-                width: game.width
-                height: units.gu(6)
-                spacing: units.gu(1)
+            Component {
+                id: defeatDiaComponent
+                Dialog {
+                    id: defeatDia
+                    title: i18n.tr("Game over. :(")
+                    text: i18n.tr("Score") + ": " + game.score
 
-                Button {
-                    text: i18n.tr("Restart")
-                    width: (parent.width - units.gu(1)) / 2
-                    height: parent.height
-                    color: UbuntuColors.warmGrey
-                    onClicked: PopupUtils.open(restartDiaComponent)
+                    Button {
+                        text: i18n.tr("Restart")
+                        color: UbuntuColors.green
+                        onClicked: {
+                            game.purge()
+                            PopupUtils.close(defeatDia)
+                        }
+                    }
+                    Button {
+                        text: i18n.tr("Quit")
+                        color: UbuntuColors.red
+                        onClicked: {
+                            game.purge()
+                            Qt.quit()
+                        }
+                    }
+                    Component.onCompleted: mainView.focus = false
+                    Component.onDestruction: mainView.focus = true
                 }
+            }
 
-                Button {
-                    text: i18n.tr("About")
-                    width: (parent.width - units.gu(1)) / 2
-                    height: parent.height
-                    color: UbuntuColors.warmGrey
-                    onClicked: PopupUtils.open(aboutDiaComponent)
+            Component {
+                id: aboutDiaComponent
+                Dialog {
+                    id: aboutDia
+                    title: "8192"
+                    text: "<b>" + i18n.tr("Version") + ":</b> " + version + "<br><br>" + i18n.tr("This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game and you ever happen to meet them, please consider treating them for a decent cup of coffee, they really deserve it!") + "<br><br><b>"+ i18n.tr("Copyright") + " (c) 2017 Jan Sprinz <br>neo@neothethird.de</b>"
+
+                    Button {
+                        text: i18n.tr("Donate")
+                        onClicked: {
+                            Qt.openUrlExternally("https://paypal.me/neothethird")
+                            PopupUtils.close(aboutDia)
+                        }
+                    }
+                    Button {
+                        text: i18n.tr("Report a bug")
+                        color: UbuntuColors.warmGrey
+                        onClicked: {
+                            Qt.openUrlExternally("https://github.com/neothethird/8192/issues")
+                            PopupUtils.close(aboutDia)
+                        }
+                    }
+                    Button {
+                        text: i18n.tr("Close")
+                        color: UbuntuColors.slate
+                        onClicked: {
+                            PopupUtils.close(aboutDia)
+                        }
+                    }
+                    Component.onCompleted: mainView.focus = false
+                    Component.onDestruction: mainView.focus = true
                 }
             }
         }
 
-        Timer {
-            id: winTimer
-            running: false
-            interval: 300
-            onTriggered: PopupUtils.open(victoryDiaComponent)
+        Keys.onPressed: {
+            if (event.key == Qt.Key_Left)
+            game.move(-1, 0)
+            if (event.key == Qt.Key_Right)
+            game.move(1, 0)
+            if (event.key == Qt.Key_Up)
+            game.move(0, -1)
+            if (event.key == Qt.Key_Down)
+            game.move(0, 1)
         }
-
-        Timer {
-            id: failTimer
-            running: false
-            interval: 600
-            onTriggered: PopupUtils.open(defeatDiaComponent)
-        }
-
-        Component {
-            id: restartDiaComponent
-            Dialog {
-                id: restartDia
-                title: i18n.tr("Restart")
-                text: i18n.tr("Are you sure you want to restart the game?")
-                Button {
-                    text: i18n.tr("Yes")
-                    onClicked: {
-                        game.purge()
-                        PopupUtils.close(restartDia)
-                    }
-                }
-                Button {
-                    text: i18n.tr("No")
-                    color: UbuntuColors.warmGrey
-                    onClicked: {
-                        PopupUtils.close(restartDia)
-                    }
-                }
-                Component.onCompleted: mainView.focus = false
-                Component.onDestruction: mainView.focus = true
-            }
-        }
-
-        Component {
-            id: victoryDiaComponent
-            Dialog {
-                id: victoryDia
-                title: i18n.tr("Victory")
-                Button {
-                    text: i18n.tr("Keep going")
-                    onClicked: {
-                        PopupUtils.close(victoryDia)
-                    }
-                }
-                Button {
-                    text: i18n.tr("Restart")
-                    color: UbuntuColors.warmGrey
-                    onClicked: {
-                        game.purge()
-                        PopupUtils.close(victoryDia)
-                    }
-                }
-                Component.onCompleted: mainView.focus = false
-                Component.onDestruction: mainView.focus = true
-            }
-        }
-
-        Component {
-            id: defeatDiaComponent
-            Dialog {
-                id: defeatDia
-                title: i18n.tr("Game over. :(")
-                text: i18n.tr("Score") + ": " + game.score
-
-                Button {
-                    text: i18n.tr("Restart")
-                    color: UbuntuColors.green
-                    onClicked: {
-                        game.purge()
-                        PopupUtils.close(defeatDia)
-                    }
-                }
-                Button {
-                    text: i18n.tr("Quit")
-                    color: UbuntuColors.red
-                    onClicked: {
-                        game.purge()
-                        Qt.quit()
-                    }
-                }
-                Component.onCompleted: mainView.focus = false
-                Component.onDestruction: mainView.focus = true
-            }
-        }
-
-        Component {
-            id: aboutDiaComponent
-            Dialog {
-                id: aboutDia
-                title: i18n.tr("8182")
-                text: i18n.tr("<b>Version:</b> ") + version + i18n.tr("<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game and you ever happen to meet them, please consider treating them for a decent cup of coffee, they really deserve it!<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>")
-
-                Button {
-                    text: i18n.tr("Donate")
-                    onClicked: {
-                        Qt.openUrlExternally("https://paypal.me/neothethird")
-                        PopupUtils.close(aboutDia)
-                    }
-                }
-                Button {
-                    text: i18n.tr("Report a bug")
-                    color: UbuntuColors.warmGrey
-                    onClicked: {
-                        Qt.openUrlExternally("https://github.com/neothethird/8192/issues")
-                        PopupUtils.close(aboutDia)
-                    }
-                }
-                Button {
-                    text: i18n.tr("Close")
-                    color: UbuntuColors.slate
-                    onClicked: {
-                        PopupUtils.close(aboutDia)
-                    }
-                }
-                Component.onCompleted: mainView.focus = false
-                Component.onDestruction: mainView.focus = true
-            }
-        }
-    }
-
-
-    Keys.onPressed: {
-        if (event.key == Qt.Key_Left)
-        game.move(-1, 0)
-        if (event.key == Qt.Key_Right)
-        game.move(1, 0)
-        if (event.key == Qt.Key_Up)
-        game.move(0, -1)
-        if (event.key == Qt.Key_Down)
-        game.move(0, 1)
     }
 }

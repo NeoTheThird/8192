@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Romanian language with diacritics (Română)
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-16 14:08+0200\n"
-"PO-Revision-Date: 2017-07-16 14:08+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: fr\n"
+"PO-Revision-Date: 2017-07-16 14:09+0200\n"
+"Last-Translator: Brinzariu Cristian <info@ebeton.ro>\n"
+"Language-Team: Romanian with diacritics (Română) <info@ebeton.ro>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,56 +19,56 @@ msgstr ""
 
 #: ../qml/Main.qml:79
 msgid "Welcome to 8192"
-msgstr "Bienvenue dans 8192"
+msgstr "Bine ai venit la 8192"
 
 #: ../qml/Main.qml:123
 msgid "YOUR SCORE"
-msgstr "VOTRE SCORE"
+msgstr "SCORUL TÂU"
 
 #: ../qml/Main.qml:129
 msgid "HIGHSCORE"
-msgstr "RECORD"
+msgstr "CEL MAI BUN SCOR"
 
 #: ../qml/Main.qml:160 ../qml/Main.qml:195 ../qml/Main.qml:228
 #: ../qml/Main.qml:248
 msgid "Restart"
-msgstr "Recommencer"
+msgstr "Reîncepe"
 
 #: ../qml/Main.qml:168
 msgid "About"
-msgstr "À propos"
+msgstr "Despre"
 
 #: ../qml/Main.qml:196
 msgid "Are you sure you want to restart the game?"
-msgstr "Voulez-vous vraiment recommencer la partie[nbsp]?"
+msgstr "Eşti sigur că vrei să încerci din nou?"
 
 #: ../qml/Main.qml:198
 msgid "Yes"
-msgstr "Oui"
+msgstr "Da"
 
 #: ../qml/Main.qml:205
 msgid "No"
-msgstr "Non"
+msgstr "Nu"
 
 #: ../qml/Main.qml:220
 msgid "Victory"
-msgstr "Victoire"
+msgstr "Victorie"
 
 #: ../qml/Main.qml:222
 msgid "Keep going"
-msgstr "Continuer"
+msgstr "Continuă"
 
 #: ../qml/Main.qml:244
 msgid "Game over. :("
-msgstr "Partie terminée. :("
+msgstr "Ai pierdut. :("
 
 #: ../qml/Main.qml:245
 msgid "Score"
-msgstr "Score"
+msgstr "Scor"
 
 #: ../qml/Main.qml:256
 msgid "Quit"
-msgstr "Quitter"
+msgstr "Închide"
 
 #: ../qml/Main.qml:273
 msgid "Version"
@@ -88,15 +88,15 @@ msgstr ""
 
 #: ../qml/Main.qml:276
 msgid "Donate"
-msgstr "Faire un don"
+msgstr "Donaţi"
 
 #: ../qml/Main.qml:283
 msgid "Report a bug"
-msgstr "Signaler une anomalie"
+msgstr "Raportaţi o problemă"
 
 #: ../qml/Main.qml:291
 msgid "Close"
-msgstr "Fermer"
+msgstr "Închide"
 
 #: 8192.desktop.in.h:1
 msgid "8192"
@@ -106,7 +106,7 @@ msgstr "8192"
 #~ msgstr "8182"
 
 #~ msgid "<b>Version:</b> "
-#~ msgstr "<b>Version[nbsp]:</b> "
+#~ msgstr "<b>Versiunea[nbsp]:</b> "
 
 #~ msgid ""
 #~ "<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
@@ -115,8 +115,8 @@ msgstr "8192"
 #~ "treating them for a decent cup of coffee, they really deserve it!"
 #~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"
 #~ msgstr ""
-#~ "<br><br>Ce jeu a été honteusement pompé du jeu \"2048\" de Gabriele "
-#~ "Cirull, qui lui-même s'inspire du jeu \"1024!\" de Jason Saxon. Si vous "
-#~ "aimez ce jeu et que vous avez la chance de les rencontrer, pensez à leur "
-#~ "offrir une bonne tasse de café, ils le méritent largement[nbsp]!"
+#~ "<br><br>Acest joc este o versiune a jocului \"2048\" a lui Gabriele "
+#~ "Cirulli care de asemenea a fost inspirat de jocul \"1024!\" a lui Jason "
+#~ "Saxon. Aşa că dacă va plăcut acest joc şi se întâmplă să îi întâlniţi "
+#~ "luaţi în considerare să le faceţi cinste cu o cafea, O merită din plin!"
 #~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"

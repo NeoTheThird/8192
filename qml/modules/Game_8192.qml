@@ -32,12 +32,14 @@ UbuntuShape {
     focus: true
     color: UbuntuColors.warmGrey
 
-    property variant numbers: []
-    property variant savedNumbers: saveNumbers()
+    property var numbers: []
+    property var board: new Array(app.rows*app.cols)
+    property string boardString: ""
     property int cols: 6
     property int rows: 6
     property int finalValue: 8192
     property int score: 0
+    property int highscore: 0
     property bool won: false
 
     signal victory
@@ -49,6 +51,7 @@ UbuntuShape {
                 return numbers[i]
         }
     }
+
     function popNumber(col, row) {
         var tmp = numbers
         for (var i = 0; i < tmp.length; i++) {
@@ -59,6 +62,7 @@ UbuntuShape {
         }
         numbers = tmp
     }
+
     function purge() {
         score = 0
         won = false
@@ -68,30 +72,36 @@ UbuntuShape {
         }
         tmp = new Array()
         numbers = tmp
-        new_number();
-        new_number();
+        new_number()
+        new_number()
+        console.log("New board")
+        save()
     }
+
     function load() {
-        var dbNumbers = gameDoc.contents.numbers
-        var tmp = numbers
+        board = JSON.parse(boardString)
         var newNumber
-        for (var i = 0; i < dbNumbers.length; i++) {
-            newNumber = number.createObject(gameGrid,{"number": dbNumbers[i][0],"col": dbNumbers[i][1],"row": dbNumbers[i][2]})
-            tmp.push(newNumber)
+        for (var i = 0; i < board.length; i++) {
+            if (board[i]) {
+                newNumber = number.createObject(gameGrid,{"number": board[i],"col": i / app.cols,"row": i % app.cols})
+                numbers.push(newNumber)
+            }
         }
-        numbers = tmp
-        score = gameDoc.contents.score
-        won = gameDoc.contents.won
     }
-    function loadSavedState() {
-        var tmp = numbers
-        var newNumber
-        for (var i = 0; i < savedNumbers.length; i++) {
-            newNumber = number.createObject(gameGrid,{"number": savedNumbers[i][0],"col": savedNumbers[i][1],"row": savedNumbers[i][2]})
-            tmp.push(newNumber)
+
+    function save() {
+        for (var i = 0; i < app.cols; i++) {
+            for (var j = 0; j < app.rows; j++) {
+                if (getNumber(i, j)) {
+                    app.board[(i * app.cols) + j] = getNumber(i,j).number
+                } else {
+                    app.board[(i * app.cols) + j] = 0
+                }
+            }
         }
-        numbers = tmp
+        boardString = JSON.stringify(board)
     }
+
     function checkNotStuck() {
         for (var i = 0; i < app.cols; i++) {
             for (var j = 0; j < app.rows; j++) {
@@ -108,14 +118,6 @@ UbuntuShape {
             }
         }
         return false
-    }
-    function saveNumbers() {
-        var returnNumbers = new Array(app.numbers.length)
-        for (var i = 0; i < app.numbers.length; i++) {
-            returnNumbers[i] = new Array(3)
-            returnNumbers[i] = [app.numbers[i].number, app.numbers[i].col, app.numbers[i].row]
-        }
-        return returnNumbers
     }
 
     Component {
@@ -302,7 +304,6 @@ UbuntuShape {
         }
     }
 
-
     MouseArea {
         anchors.fill: parent
         property int minimumLength: app.width < app.height ? app.width / 6 : app.height / 6
@@ -332,6 +333,7 @@ UbuntuShape {
                     app.move(0, -1)
         }
     }
+
     function new_number() {
         var tmp = numbers
         var cell = cells.getRandomFree()
@@ -365,6 +367,7 @@ UbuntuShape {
                 }
             }
         }
+
         if (col < 0) {
             for (var j = 0; j < app.rows; j++) {
                 var filled = 0
@@ -387,6 +390,7 @@ UbuntuShape {
                 }
             }
         }
+
         if (row > 0) {
             for (var i = 0; i < app.cols; i++) {
                 var filled = 0
@@ -409,6 +413,7 @@ UbuntuShape {
                 }
             }
         }
+
         if (row < 0) {
             for (var i = 0; i < app.cols; i++) {
                 var filled = 0
@@ -431,9 +436,13 @@ UbuntuShape {
                 }
             }
         }
+
         if (somethingMoved)
             new_number()
+
         if (!checkNotStuck())
             app.defeat()
+
+        save()
     }
 }
