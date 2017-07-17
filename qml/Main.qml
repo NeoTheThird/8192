@@ -109,40 +109,11 @@ Window {
                 anchors.bottomMargin: units.gu(1)
                 spacing: units.gu(1)
 
-                Row {
-                    id: topMenue
-                    width: parent.width
-                    height: parent.height / 9
+                Header {
+                    score: game.score
+                    highscore: game.highscore
                     spacing: units.gu(1)
-
-                    UbuntuShape {
-                        id: logo
-                        width: parent.height
-                        height: width
-                        source: Image {
-                            source: "../assets/logo.png"
-                        }
-                    }
-
-                    Column {
-                        id: scores
-                        width: parent.width - parent.height - units.gu(1)
-                        height: parent.height
-                        spacing: units.gu(1)
-
-                        Button {
-                            width: parent.width
-                            height: (parent.height - parent.spacing) / 2
-                            color: UbuntuColors.warmGrey
-                            text: "<center><small>" + i18n.tr("YOUR SCORE") + ":</small> <b>" + game.score + "</b></center>"
-                        }
-                        Button {
-                            width: parent.width
-                            height: (parent.height - parent.spacing) / 2
-                            color: UbuntuColors.warmGrey
-                            text: "<center><small>" + i18n.tr("HIGHSCORE") + ":</small> <b>" + game.highscore + "</b></center>"
-                        }
-                    }
+                    logo: Qt.resolvedUrl("../assets/logo.png")
                 }
 
                 Game {
