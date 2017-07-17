@@ -32,7 +32,7 @@ import "modules"
 
 Window {
     id: mainWindow
-    title: "Welcome to UBports"
+    title: "Welcome to 8192"
     width: units.gu(360)
     height: units.gu(530)
     minimumWidth: units.gu(45)
