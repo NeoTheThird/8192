@@ -1,5 +1,5 @@
 /*
-* GameLogic.qml
+* Game.qml
 *
 * Copyright (C) 2017 Jan Sprinz aka. NeoTheThird <neo@neothethird.de>
 * This file is part of 8192, a game about squares. <http://neothethird.de/8192/>
