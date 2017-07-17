@@ -72,7 +72,7 @@ msgstr "Quitter"
 
 #: ../qml/Main.qml:273
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: ../qml/Main.qml:273
 msgid ""
@@ -81,10 +81,14 @@ msgid ""
 "and you ever happen to meet them, please consider treating them for a decent "
 "cup of coffee, they really deserve it!"
 msgstr ""
+"Ce jeu est honteusement pompé du jeu \"2048\" de Gabriele Cirulli, "
+"qui a lui-même été inspiré par le jeu \"1024!\" de Jason Saxon. Si vous aimez ce jeu "
+"et que vous avez la chance de les rencontrer, pensez à leur offrir une bonne "
+"tasse de café, ils le méritent bien[nbsp]!"
 
 #: ../qml/Main.qml:273
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: ../qml/Main.qml:276
 msgid "Donate"
