@@ -25,7 +25,7 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.0
+import Ubuntu.Components.Popups 1.3
 import Qt.labs.settings 1.0
 import QtQuick.Window 2.2
 import "modules"
@@ -207,6 +207,7 @@ Window {
                     id: restartDia
                     title: i18n.tr("Restart")
                     text: i18n.tr("Are you sure you want to restart the game?")
+
                     Button {
                         text: i18n.tr("Yes")
                         onClicked: {
@@ -214,6 +215,7 @@ Window {
                             PopupUtils.close(restartDia)
                         }
                     }
+
                     Button {
                         text: i18n.tr("No")
                         color: UbuntuColors.warmGrey
@@ -221,8 +223,6 @@ Window {
                             PopupUtils.close(restartDia)
                         }
                     }
-                    Component.onCompleted: mainView.focus = false
-                    Component.onDestruction: mainView.focus = true
                 }
             }
 
@@ -231,12 +231,14 @@ Window {
                 Dialog {
                     id: victoryDia
                     title: i18n.tr("Victory")
+
                     Button {
                         text: i18n.tr("Keep going")
                         onClicked: {
                             PopupUtils.close(victoryDia)
                         }
                     }
+
                     Button {
                         text: i18n.tr("Restart")
                         color: UbuntuColors.warmGrey
@@ -245,8 +247,6 @@ Window {
                             PopupUtils.close(victoryDia)
                         }
                     }
-                    Component.onCompleted: mainView.focus = false
-                    Component.onDestruction: mainView.focus = true
                 }
             }
 
@@ -265,6 +265,7 @@ Window {
                             PopupUtils.close(defeatDia)
                         }
                     }
+
                     Button {
                         text: i18n.tr("Quit")
                         color: UbuntuColors.red
@@ -273,8 +274,6 @@ Window {
                             Qt.quit()
                         }
                     }
-                    Component.onCompleted: mainView.focus = false
-                    Component.onDestruction: mainView.focus = true
                 }
             }
 
@@ -292,6 +291,7 @@ Window {
                             PopupUtils.close(aboutDia)
                         }
                     }
+
                     Button {
                         text: i18n.tr("Report a bug")
                         color: UbuntuColors.warmGrey
@@ -300,6 +300,7 @@ Window {
                             PopupUtils.close(aboutDia)
                         }
                     }
+
                     Button {
                         text: i18n.tr("Close")
                         color: UbuntuColors.slate
@@ -307,8 +308,6 @@ Window {
                             PopupUtils.close(aboutDia)
                         }
                     }
-                    Component.onCompleted: mainView.focus = false
-                    Component.onDestruction: mainView.focus = true
                 }
             }
         }

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 09:59+0000\n"
+"POT-Creation-Date: 2017-07-17 10:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "HIGHSCORE"
 msgstr ""
 
-#: ../qml/Main.qml:173 ../qml/Main.qml:208 ../qml/Main.qml:241
+#: ../qml/Main.qml:173 ../qml/Main.qml:208 ../qml/Main.qml:243
 #: ../qml/Main.qml:261
 msgid "Restart"
 msgstr ""
@@ -42,11 +42,11 @@ msgstr ""
 msgid "Are you sure you want to restart the game?"
 msgstr ""
 
-#: ../qml/Main.qml:211
+#: ../qml/Main.qml:212
 msgid "Yes"
 msgstr ""
 
-#: ../qml/Main.qml:218
+#: ../qml/Main.qml:220
 msgid "No"
 msgstr ""
 
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Victory"
 msgstr ""
 
-#: ../qml/Main.qml:235
+#: ../qml/Main.qml:236
 msgid "Keep going"
 msgstr ""
 
@@ -66,15 +66,15 @@ msgstr ""
 msgid "Score"
 msgstr ""
 
-#: ../qml/Main.qml:269
+#: ../qml/Main.qml:270
 msgid "Quit"
 msgstr ""
 
-#: ../qml/Main.qml:286
+#: ../qml/Main.qml:285
 msgid "Version"
 msgstr ""
 
-#: ../qml/Main.qml:286
+#: ../qml/Main.qml:285
 msgid ""
 "This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
 "which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
@@ -82,11 +82,11 @@ msgid ""
 "cup of coffee, they really deserve it!"
 msgstr ""
 
-#: ../qml/Main.qml:286
+#: ../qml/Main.qml:285
 msgid "Copyright"
 msgstr ""
 
-#: ../qml/Main.qml:289
+#: ../qml/Main.qml:288
 msgid "Donate"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "Report a bug"
 msgstr ""
 
-#: ../qml/Main.qml:304
+#: ../qml/Main.qml:305
 msgid "Close"
 msgstr ""
 
