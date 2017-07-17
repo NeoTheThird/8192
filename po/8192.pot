@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 14:10+0000\n"
+"POT-Creation-Date: 2017-07-17 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,56 +25,32 @@ msgstr ""
 msgid "HIGHSCORE"
 msgstr ""
 
-#: ../qml/Main.qml:92
-msgid "Welcome to 8192"
-msgstr ""
-
-#: ../qml/Main.qml:143 ../qml/Main.qml:178 ../qml/Main.qml:213
-#: ../qml/Main.qml:231
+#: ../qml/modules/Footer.qml:61 ../qml/modules/Footer.qml:69
+#: ../qml/Main.qml:169 ../qml/Main.qml:187
 msgid "Restart"
 msgstr ""
 
-#: ../qml/Main.qml:151
-msgid "About"
-msgstr ""
-
-#: ../qml/Main.qml:179
+#: ../qml/modules/Footer.qml:70
 msgid "Are you sure you want to restart the game?"
 msgstr ""
 
-#: ../qml/Main.qml:182
+#: ../qml/modules/Footer.qml:73
 msgid "Yes"
 msgstr ""
 
-#: ../qml/Main.qml:190
+#: ../qml/modules/Footer.qml:81
 msgid "No"
 msgstr ""
 
-#: ../qml/Main.qml:203
-msgid "Victory"
+#: ../qml/modules/Footer.qml:104
+msgid "About"
 msgstr ""
 
-#: ../qml/Main.qml:206
-msgid "Keep going"
-msgstr ""
-
-#: ../qml/Main.qml:227
-msgid "Game over. :("
-msgstr ""
-
-#: ../qml/Main.qml:228
-msgid "Score"
-msgstr ""
-
-#: ../qml/Main.qml:240
-msgid "Quit"
-msgstr ""
-
-#: ../qml/Main.qml:255
+#: ../qml/modules/Footer.qml:113
 msgid "Version"
 msgstr ""
 
-#: ../qml/Main.qml:255
+#: ../qml/modules/Footer.qml:113
 msgid ""
 "This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
 "which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
@@ -82,20 +58,44 @@ msgid ""
 "cup of coffee, they really deserve it!"
 msgstr ""
 
-#: ../qml/Main.qml:255
+#: ../qml/modules/Footer.qml:113
 msgid "Copyright"
 msgstr ""
 
-#: ../qml/Main.qml:258
+#: ../qml/modules/Footer.qml:116
 msgid "Donate"
 msgstr ""
 
-#: ../qml/Main.qml:266
+#: ../qml/modules/Footer.qml:124
 msgid "Report a bug"
 msgstr ""
 
-#: ../qml/Main.qml:275
+#: ../qml/modules/Footer.qml:133
 msgid "Close"
+msgstr ""
+
+#: ../qml/Main.qml:92
+msgid "Welcome to 8192"
+msgstr ""
+
+#: ../qml/Main.qml:159
+msgid "Victory"
+msgstr ""
+
+#: ../qml/Main.qml:162
+msgid "Keep going"
+msgstr ""
+
+#: ../qml/Main.qml:183
+msgid "Game over. :("
+msgstr ""
+
+#: ../qml/Main.qml:184
+msgid "Score"
+msgstr ""
+
+#: ../qml/Main.qml:196
+msgid "Quit"
 msgstr ""
 
 #: 8192.desktop.in.h:1

@@ -133,27 +133,8 @@ Window {
                     }
                 }
 
-                Row {
-                    id: controls
-                    width: game.width
-                    height: units.gu(6)
-                    spacing: units.gu(1)
+                Footer {
 
-                    Button {
-                        text: i18n.tr("Restart")
-                        width: (parent.width - units.gu(1)) / 2
-                        height: parent.height
-                        color: UbuntuColors.warmGrey
-                        onClicked: PopupUtils.open(restartDiaComponent)
-                    }
-
-                    Button {
-                        text: i18n.tr("About")
-                        width: (parent.width - units.gu(1)) / 2
-                        height: parent.height
-                        color: UbuntuColors.warmGrey
-                        onClicked: PopupUtils.open(aboutDiaComponent)
-                    }
                 }
             }
 
@@ -169,31 +150,6 @@ Window {
                 running: false
                 interval: 600
                 onTriggered: PopupUtils.open(defeatDiaComponent)
-            }
-
-            Component {
-                id: restartDiaComponent
-                Dialog {
-                    id: restartDia
-                    title: i18n.tr("Restart")
-                    text: i18n.tr("Are you sure you want to restart the game?")
-
-                    Button {
-                        text: i18n.tr("Yes")
-                        onClicked: {
-                            game.purge()
-                            PopupUtils.close(restartDia)
-                        }
-                    }
-
-                    Button {
-                        text: i18n.tr("No")
-                        color: UbuntuColors.warmGrey
-                        onClicked: {
-                            PopupUtils.close(restartDia)
-                        }
-                    }
-                }
             }
 
             Component {
@@ -242,40 +198,6 @@ Window {
                         onClicked: {
                             game.purge()
                             Qt.quit()
-                        }
-                    }
-                }
-            }
-
-            Component {
-                id: aboutDiaComponent
-                Dialog {
-                    id: aboutDia
-                    title: "8192"
-                    text: "<b>" + i18n.tr("Version") + ":</b> " + mainView.version + "<br><br>" + i18n.tr("This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game and you ever happen to meet them, please consider treating them for a decent cup of coffee, they really deserve it!") + "<br><br><b>"+ i18n.tr("Copyright") + " (c) 2017 Jan Sprinz <br>neo@neothethird.de</b>"
-
-                    Button {
-                        text: i18n.tr("Donate")
-                        onClicked: {
-                            Qt.openUrlExternally("https://paypal.me/neothethird")
-                            PopupUtils.close(aboutDia)
-                        }
-                    }
-
-                    Button {
-                        text: i18n.tr("Report a bug")
-                        color: UbuntuColors.warmGrey
-                        onClicked: {
-                            Qt.openUrlExternally("https://github.com/neothethird/8192/issues")
-                            PopupUtils.close(aboutDia)
-                        }
-                    }
-
-                    Button {
-                        text: i18n.tr("Close")
-                        color: UbuntuColors.slate
-                        onClicked: {
-                            PopupUtils.close(aboutDia)
                         }
                     }
                 }
