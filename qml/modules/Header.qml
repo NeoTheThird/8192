@@ -29,7 +29,7 @@ import Ubuntu.Components 1.3
 UbuntuShape {
     id: header
     width: parent.width
-    height: (width - 5 * spacing) / 6 + spacing * 2
+    height: (width - 5 * spacing) / 3 + spacing * 2.5
     color: UbuntuColors.warmGrey
 
     property int score
@@ -58,17 +58,38 @@ UbuntuShape {
             height: parent.height
             spacing: units.gu(1)
 
-            Button {
+            UbuntuShape {
                 width: parent.width
                 height: (parent.height - parent.spacing) / 2
-                color: UbuntuColors.warmGrey
-                text: "<center><small>" + i18n.tr("YOUR SCORE") + ":</small> <b>" + game.score + "</b></center>"
+                color: "#eee4da"
+                Label {
+                    width: parent.width * 0.9
+                    height: parent.height * 0.9
+                    anchors.centerIn: parent
+                    font.pixelSize: parent.height / 2.5
+                    fontSizeMode: Text.Fit
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    color: "#656565"
+                    text: "<center><small>" + i18n.tr("YOUR SCORE") + ":</small> <b>" + game.score + "</b></center>"
+                }
             }
-            Button {
+
+            UbuntuShape {
                 width: parent.width
                 height: (parent.height - parent.spacing) / 2
-                color: UbuntuColors.warmGrey
-                text: "<center><small>" + i18n.tr("HIGHSCORE") + ":</small> <b>" + game.highscore + "</b></center>"
+                color: "#eee4da"
+                Label {
+                    width: parent.width * 0.9
+                    height: parent.height * 0.9
+                    anchors.centerIn: parent
+                    font.pixelSize: parent.height / 2.5
+                    fontSizeMode: Text.Fit
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    color: "#656565"
+                    text: "<center><small>" + i18n.tr("HIGHSCORE") + ":</small> <b>" + game.highscore + "</b></center>"
+                }
             }
         }
     }
