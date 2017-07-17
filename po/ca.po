@@ -7,104 +7,121 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-14 02:10+0200\n"
-"PO-Revision-Date: 2017-06-14 03:19+0200\n"
+"POT-Creation-Date: 2017-07-17 02:35+0200\n"
+"PO-Revision-Date: 2017-07-17 02:39+0200\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: \n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7.1\n"
-"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: ca\n"
 
-#: ../qml/Main.qml:79
+#: ../qml/Main.qml:93
 msgid "Welcome to 8192"
 msgstr "Benvingut al 8192"
 
-#: ../qml/Main.qml:123
+#: ../qml/Main.qml:137
 msgid "YOUR SCORE"
 msgstr "LA VOSTRA PUNTUACIÓ"
 
-#: ../qml/Main.qml:129
+#: ../qml/Main.qml:143
 msgid "HIGHSCORE"
 msgstr "RÈCORD"
 
-#: ../qml/Main.qml:160 ../qml/Main.qml:195 ../qml/Main.qml:228
-#: ../qml/Main.qml:248
+#: ../qml/Main.qml:173 ../qml/Main.qml:208 ../qml/Main.qml:241
+#: ../qml/Main.qml:261
 msgid "Restart"
 msgstr "Reinicia"
 
-#: ../qml/Main.qml:168
+#: ../qml/Main.qml:181
 msgid "About"
 msgstr "Quant a"
 
-#: ../qml/Main.qml:196
+#: ../qml/Main.qml:209
 msgid "Are you sure you want to restart the game?"
 msgstr "Esteu segur de que voleu reiniciar el joc?"
 
-#: ../qml/Main.qml:198
+#: ../qml/Main.qml:211
 msgid "Yes"
 msgstr "Sí"
 
-#: ../qml/Main.qml:205
+#: ../qml/Main.qml:218
 msgid "No"
 msgstr "No"
 
-#: ../qml/Main.qml:220
+#: ../qml/Main.qml:233
 msgid "Victory"
 msgstr "Victòria"
 
-#: ../qml/Main.qml:222
+#: ../qml/Main.qml:235
 msgid "Keep going"
 msgstr "Continua"
 
-#: ../qml/Main.qml:244
+#: ../qml/Main.qml:257
 msgid "Game over. :("
 msgstr "Heu perdut :("
 
-#: ../qml/Main.qml:245
+#: ../qml/Main.qml:258
 msgid "Score"
 msgstr "Puntuació"
 
-#: ../qml/Main.qml:256
+#: ../qml/Main.qml:269
 msgid "Quit"
 msgstr "Sortir"
 
-#: ../qml/Main.qml:272
-msgid "8182"
-msgstr "8182"
+#: ../qml/Main.qml:286
+msgid "Version"
+msgstr "Versió"
 
-#: ../qml/Main.qml:273
-msgid "<b>Version:</b> "
-msgstr "<b>Versió:</b> "
-
-#: ../qml/Main.qml:273
+#: ../qml/Main.qml:286
 msgid ""
-"<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
-"\"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy "
-"this game and you ever happen to meet them, please consider treating them "
-"for a decent cup of coffee, they really deserve it!<br><br><b>Copyright (c) "
-"2017 Jan Sprinz<br>neo@neothethird.de</b>"
+"This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
+"which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
+"and you ever happen to meet them, please consider treating them for a decent "
+"cup of coffee, they really deserve it!"
 msgstr ""
-"<br><br>Aquest joc ha estat copiat vergonyosament del «2048» del Gabriele "
-"Cirulli, que es va inspirar en el joc «1024» del Jason Saxon. Si gaudiu "
-"d'aquest joc i us trobau qualcún d'ells, considerau l'opció de convidar-los "
-"a una tassa de cafè decent, s'ho mereixen de debò!<br><br><b>Copyright (c) "
-"2017 Jan Sprinz<br>neo@neothethird.de</b>"
+"Aquest joc a és una còpia descarada del «2048» del Gabriele Cirulli, que es "
+"va inspirar en «1024!» del Jason Saxon. Si us agrada el joc i qualque pic "
+"topau algun d'ells, considerau en convidar-los a una tassa de cafè o te "
+"decents. Realment s'ho mereixen!"
 
-#: ../qml/Main.qml:276
+#: ../qml/Main.qml:286
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../qml/Main.qml:289
 msgid "Donate"
 msgstr "Doneu"
 
-#: ../qml/Main.qml:283
+#: ../qml/Main.qml:296
 msgid "Report a bug"
 msgstr "Reporteu un error"
 
-#: ../qml/Main.qml:291
+#: ../qml/Main.qml:304
 msgid "Close"
 msgstr "Tanca"
 
 #: 8192.desktop.in.h:1
 msgid "8192"
 msgstr "8192"
+
+#~ msgid "8182"
+#~ msgstr "8182"
+
+#~ msgid "<b>Version:</b> "
+#~ msgstr "<b>Versió:</b> "
+
+#~ msgid ""
+#~ "<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
+#~ "\"2048\", which was inspired by Jason Saxon's game \"1024!\". If you "
+#~ "enjoy this game and you ever happen to meet them, please consider "
+#~ "treating them for a decent cup of coffee, they really deserve it!"
+#~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"
+#~ msgstr ""
+#~ "<br><br>Aquest joc ha estat copiat vergonyosament del «2048» del Gabriele "
+#~ "Cirulli, que es va inspirar en el joc «1024» del Jason Saxon. Si gaudiu "
+#~ "d'aquest joc i us trobau qualcún d'ells, considerau l'opció de convidar-"
+#~ "los a una tassa de cafè decent, s'ho mereixen de debò!"
+#~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"
