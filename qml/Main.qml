@@ -32,7 +32,7 @@ import "modules"
 
 Window {
     id: mainWindow
-    title: l18n.tr("Welcome to 8192")
+    title: i18n.tr("Welcome to 8192")
     width: units.gu(360)
     height: units.gu(530)
     minimumWidth: units.gu(45)
@@ -99,16 +99,18 @@ Window {
 
             Column {
                 id: gameColumn
-                width: parent.width - units.gu(2)
-                height: width * 1.5
-                anchors.fill: parent
-                anchors.topMargin: units.gu(7)
-                anchors.leftMargin: units.gu(1)
-                anchors.rightMargin: units.gu(1)
-                anchors.bottomMargin: units.gu(1)
+                width: (parent.width - units.gu(2) < parent.height - header.height - footer.height - units.gu(10))
+                            ? parent.width - units.gu(2)
+                            : parent.height - header.height - footer.height - units.gu(10)
+                height: header.height + game.height + footer.height + units.gu(2)
+                anchors {
+                    centerIn: parent
+                    verticalCenterOffset: units.gu(3)
+                }
                 spacing: units.gu(1)
 
                 Header {
+                    id: header
                     score: game.score
                     highscore: game.highscore
                     spacing: units.gu(1)
@@ -134,7 +136,7 @@ Window {
                 }
 
                 Footer {
-
+                    id: footer
                 }
             }
 
