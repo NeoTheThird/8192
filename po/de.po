@@ -107,6 +107,3 @@ msgstr "Schließen"
 #: 8192.desktop.in.h:1
 msgid "8192"
 msgstr "8192"
-
-#~ msgid "<b>Version:</b> "
-#~ msgstr "<b>Version:</b> "

@@ -108,22 +108,3 @@ msgstr "Tanca"
 #: 8192.desktop.in.h:1
 msgid "8192"
 msgstr "8192"
-
-#~ msgid "8182"
-#~ msgstr "8182"
-
-#~ msgid "<b>Version:</b> "
-#~ msgstr "<b>Versió:</b> "
-
-#~ msgid ""
-#~ "<br><br>This game was shamelessly ripped of from Gabriele Cirulli's game "
-#~ "\"2048\", which was inspired by Jason Saxon's game \"1024!\". If you "
-#~ "enjoy this game and you ever happen to meet them, please consider "
-#~ "treating them for a decent cup of coffee, they really deserve it!"
-#~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"
-#~ msgstr ""
-#~ "<br><br>Aquest joc ha estat copiat vergonyosament del «2048» del Gabriele "
-#~ "Cirulli, que es va inspirar en el joc «1024» del Jason Saxon. Si gaudiu "
-#~ "d'aquest joc i us trobau qualcún d'ells, considerau l'opció de convidar-"
-#~ "los a una tassa de cafè decent, s'ho mereixen de debò!"
-#~ "<br><br><b>Copyright (c) 2017 Jan Sprinz<br>neo@neothethird.de</b>"
