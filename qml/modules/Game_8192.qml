@@ -1,27 +1,27 @@
 /*
- * GameLogic.qml
- *
- * Copyright (C) 2017 Jan Sprinz aka. NeoTheThird <neo@neothethird.de>
- * This file is part of 8192, a game about squares. <http://neothethird.de/8192/>
- *
- * This game was shamelessly ripped of from Gabriele Cirulli's game "2048",
- * wich was inspired by Jason Saxon's game "1024!". If you enjoy this game
- * and you ever happen to meet them, please consider treating them for a decent
- * cup of coffe, they really deserve it!
- *
- * 8192 is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 3 as
- * published by the Free Software Foundation.
- *
- * 8192 is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with 8192. If not, see <http://www.gnu.org/licenses/>.
- *
- */
+* GameLogic.qml
+*
+* Copyright (C) 2017 Jan Sprinz aka. NeoTheThird <neo@neothethird.de>
+* This file is part of 8192, a game about squares. <http://neothethird.de/8192/>
+*
+* This game was shamelessly ripped of from Gabriele Cirulli's game "2048",
+* wich was inspired by Jason Saxon's game "1024!". If you enjoy this game
+* and you ever happen to meet them, please consider treating them for a decent
+* cup of coffe, they really deserve it!
+*
+* 8192 is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License version 3 as
+* published by the Free Software Foundation.
+*
+* 8192 is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with 8192. If not, see <http://www.gnu.org/licenses/>.
+*
+*/
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
@@ -48,7 +48,7 @@ UbuntuShape {
     function getNumber(col, row) {
         for (var i = 0; i < numbers.length; i++) {
             if (numbers[i].col == col && numbers[i].row == row)
-                return numbers[i]
+            return numbers[i]
         }
     }
 
@@ -106,15 +106,15 @@ UbuntuShape {
         for (var i = 0; i < app.cols; i++) {
             for (var j = 0; j < app.rows; j++) {
                 if (!getNumber(i, j))
-                    return true
+                return true
                 if (getNumber(i+1,j) && getNumber(i,j).number == getNumber(i+1,j).number)
-                    return true
+                return true
                 if (getNumber(i-1,j) && getNumber(i,j).number == getNumber(i-1,j).number)
-                    return true
+                return true
                 if (getNumber(i,j+1) && getNumber(i,j).number == getNumber(i,j+1).number)
-                    return true
+                return true
                 if (getNumber(i,j-1) && getNumber(i,j).number == getNumber(i,j-1).number)
-                    return true
+                return true
             }
         }
         return false
@@ -126,20 +126,20 @@ UbuntuShape {
         UbuntuShape {
             id: colorRect
             color: number <=    1 ? "transparent" :
-                   number <=    2 ? "#eee4da"     :
-                   number <=    4 ? "#ede0c8"     :
-                   number <=    8 ? "#f2b179"     :
-                   number <=   16 ? "#f59563"     :
-                   number <=   32 ? "#f67c5f"     :
-                   number <=   64 ? "#f65e3b"     :
-                   number <=  128 ? "#edcf72"     :
-                   number <=  256 ? "#edcc61"     :
-                   number <=  512 ? "#edc850"     :
-                   number <= 1024 ? "#edc53f"     :
-                   number <= 2048 ? "#edc22e"     :
-                   number <= 4096 ? "#E95420"     :
-                   number <= 8192 ? "#77216F"     :
-                                    "#2C001E"
+            number <=    2 ? "#eee4da"     :
+            number <=    4 ? "#ede0c8"     :
+            number <=    8 ? "#f2b179"     :
+            number <=   16 ? "#f59563"     :
+            number <=   32 ? "#f67c5f"     :
+            number <=   64 ? "#f65e3b"     :
+            number <=  128 ? "#edcf72"     :
+            number <=  256 ? "#edcc61"     :
+            number <=  512 ? "#edc850"     :
+            number <= 1024 ? "#edc53f"     :
+            number <= 2048 ? "#edc22e"     :
+            number <= 4096 ? "#E95420"     :
+            number <= 8192 ? "#77216F"     :
+            "#2C001E"
 
             property int col
             property int row
@@ -161,7 +161,7 @@ UbuntuShape {
 
             function move(h, v) {
                 if (h == col && v == row)
-                    return false
+                return false
                 if (app.getNumber(h, v)) {
                     number += app.getNumber(h, v).number
                     app.score += number
@@ -182,7 +182,7 @@ UbuntuShape {
             }
 
 
-           Label {
+            Label {
                 id: text
 
                 width: parent.width * 0.9
@@ -206,6 +206,7 @@ UbuntuShape {
                     }
                 }
             }
+
             Behavior on y {
                 NumberAnimation {
                     duration: 60
@@ -229,6 +230,7 @@ UbuntuShape {
                 origin.y: colorRect.height / 2
                 xScale: 0
                 yScale: 0
+
                 Behavior on xScale {
                     NumberAnimation {
                         duration: 150
@@ -237,6 +239,7 @@ UbuntuShape {
                         }
                     }
                 }
+
                 Behavior on yScale {
                     NumberAnimation {
                         duration: 150
@@ -254,52 +257,49 @@ UbuntuShape {
         }
     }
 
-    Item {
+    Grid {
+        id: gameGrid
         anchors.centerIn: parent
-        height: parent.height / 32 * 31
-        width: parent.width / 32 * 31
+        height: parent.height - spacing * 2
+        width: parent.width - spacing * 2
+        rows: app.rows
+        columns: app.cols
+        spacing: units.gu(1)
 
-        Grid {
-            id: gameGrid
-            width: parent.width
-            height: parent.height
-            anchors.bottom: parent.bottom
-            rows: app.rows
-            columns: app.cols
-            spacing: units.gu(1)
+        property real cellWidth: (width - (columns - 1) * spacing) / columns
+        property real cellHeight: (height - (rows - 1) * spacing) / rows
 
-            property real cellWidth: (width - (columns - 1) * spacing) / columns
-            property real cellHeight: (height - (rows - 1) * spacing) / rows
+        Repeater {
+            id: cells
+            model: app.cols * app.rows
+            function getTile(h, v) {
+                return itemAt(h + v * app.cols)
+            }
 
-            Repeater {
-                id: cells
-                model: app.cols * app.rows
-                function getTile(h, v) {
-                    return itemAt(h + v * app.cols)
-                }
-                function getRandom() {
-                    return itemAt(Math.floor((Math.random() * 16)%16))
-                }
-                function getRandomFree() {
-                    var free = new Array()
-                    for (var i = 0; i < app.cols; i++) {
-                        for (var j = 0; j < app.rows; j++) {
-                            if (!getNumber(i, j)) {
-                                free.push(getTile(i, j))
-                            }
+            function getRandom() {
+                return itemAt(Math.floor((Math.random() * 16)%16))
+            }
+
+            function getRandomFree() {
+                var free = new Array()
+                for (var i = 0; i < app.cols; i++) {
+                    for (var j = 0; j < app.rows; j++) {
+                        if (!getNumber(i, j)) {
+                            free.push(getTile(i, j))
                         }
                     }
-                    return free[Math.floor(Math.random()*free.length)]
                 }
-                UbuntuShape {
-                    width: parent.cellWidth
-                    height: parent.cellHeight
-                    color: "#F0F0F0"
-                    opacity: 0.3
+                return free[Math.floor(Math.random()*free.length)]
+            }
 
-                    property int col : index % app.cols
-                    property int row : index / app.cols
-                }
+            UbuntuShape {
+                width: parent.cellWidth
+                height: parent.cellHeight
+                color: "#F0F0F0"
+                opacity: 0.3
+
+                property int col : index % app.cols
+                property int row : index / app.cols
             }
         }
     }
@@ -313,24 +313,25 @@ UbuntuShape {
             startX = mouse.x
             startY = mouse.y
         }
+
         onReleased: {
             var length = Math.sqrt(Math.pow(mouse.x - startX, 2) + Math.pow(mouse.y - startY, 2))
             if (length < minimumLength)
-                return
+            return
             var diffX = mouse.x - startX
             var diffY = mouse.y - startY
             if (Math.abs(Math.abs(diffX) - Math.abs(diffY)) < minimumLength / 2)
-                return
+            return
             if (Math.abs(diffX) > Math.abs(diffY))
-                if (diffX > 0)
-                    app.move(1, 0)
-                else
-                    app.move(-1, 0)
+            if (diffX > 0)
+            app.move(1, 0)
             else
-                if (diffY > 0)
-                    app.move(0, 1)
-                else
-                    app.move(0, -1)
+            app.move(-1, 0)
+            else
+            if (diffY > 0)
+            app.move(0, 1)
+            else
+            app.move(0, -1)
         }
     }
 
@@ -361,7 +362,7 @@ UbuntuShape {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(app.cols-1-filled,j))
-                            somethingMoved = true
+                        somethingMoved = true
                         filled++
                     }
                 }
@@ -384,7 +385,7 @@ UbuntuShape {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(filled,j))
-                            somethingMoved = true
+                        somethingMoved = true
                         filled++
                     }
                 }
@@ -407,7 +408,7 @@ UbuntuShape {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(i,app.rows-1-filled))
-                            somethingMoved = true
+                        somethingMoved = true
                         filled++
                     }
                 }
@@ -430,19 +431,21 @@ UbuntuShape {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(i,filled))
-                            somethingMoved = true
+                        somethingMoved = true
                         filled++
                     }
                 }
             }
         }
 
-        if (somethingMoved)
+        if (somethingMoved) {
             new_number()
+        }
 
-        if (!checkNotStuck())
+        if (!checkNotStuck()) {
             app.defeat()
-
-        save()
+        } else {
+            save()
+        }
     }
 }
