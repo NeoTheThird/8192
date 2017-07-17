@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 16:07+0000\n"
+"POT-Creation-Date: 2017-07-17 18:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "HIGHSCORE"
 msgstr ""
 
 #: ../qml/modules/Footer.qml:61 ../qml/modules/Footer.qml:69
-#: ../qml/Main.qml:171 ../qml/Main.qml:189
+#: ../qml/Main.qml:172 ../qml/Main.qml:190
 msgid "Restart"
 msgstr ""
 
@@ -78,23 +78,23 @@ msgstr ""
 msgid "Welcome to 8192"
 msgstr ""
 
-#: ../qml/Main.qml:161
+#: ../qml/Main.qml:162
 msgid "Victory"
 msgstr ""
 
-#: ../qml/Main.qml:164
+#: ../qml/Main.qml:165
 msgid "Keep going"
 msgstr ""
 
-#: ../qml/Main.qml:185
+#: ../qml/Main.qml:186
 msgid "Game over. :("
 msgstr ""
 
-#: ../qml/Main.qml:186
+#: ../qml/Main.qml:187
 msgid "Score"
 msgstr ""
 
-#: ../qml/Main.qml:198
+#: ../qml/Main.qml:199
 msgid "Quit"
 msgstr ""
 

@@ -99,13 +99,14 @@ Window {
 
             Column {
                 id: gameColumn
-                width: (parent.width - units.gu(2) < parent.height - header.height - footer.height - units.gu(10))
-                            ? parent.width - units.gu(2)
-                            : parent.height - header.height - footer.height - units.gu(10)
-                height: header.height + game.height + footer.height + units.gu(2)
                 anchors {
-                    centerIn: parent
-                    verticalCenterOffset: units.gu(3)
+                    fill: parent
+                    margins: units.gu(1)
+                    topMargin: units.gu(7)
+                    leftMargin: footer.bottom.x - units.gu(1) < gamePage.bottom.x ?
+                        gamePage.width - width : units.gu(1)
+                    rightMargin: footer.bottom.x - units.gu(1) > gamePage.bottom.x ?
+                        gamePage.width - width : units.gu(1)
                 }
                 spacing: units.gu(1)
 
