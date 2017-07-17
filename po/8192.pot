@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-17 15:16+0000\n"
+"POT-Creation-Date: 2017-07-17 15:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: ../qml/Main.qml:92
+#: ../qml/Main.qml:35 ../qml/Main.qml:92
 msgid "Welcome to 8192"
 msgstr ""
 

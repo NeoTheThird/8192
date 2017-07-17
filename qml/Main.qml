@@ -32,7 +32,7 @@ import "modules"
 
 Window {
     id: mainWindow
-    title: "Welcome to 8192"
+    title: l18n.tr("Welcome to 8192")
     width: units.gu(360)
     height: units.gu(530)
     minimumWidth: units.gu(45)
