@@ -38,39 +38,39 @@ UbuntuShape {
     property int spacing
     property string logo
 
-Row {
-    anchors.centerIn: parent
-    height: parent.height - spacing * 2
-    width: parent.width - spacing * 2
-    spacing: units.gu(1)
-
-    UbuntuShape {
-        id: logo
-        width: parent.height
-        height: width
-        source: Image {
-            source: header.logo
-        }
-    }
-
-    Column {
-        id: scores
-        width: parent.width - parent.height - units.gu(1)
-        height: parent.height
+    Row {
+        anchors.centerIn: parent
+        height: parent.height - spacing * 2
+        width: parent.width - spacing * 2
         spacing: units.gu(1)
 
-        Button {
-            width: parent.width
-            height: (parent.height - parent.spacing) / 2
-            color: UbuntuColors.warmGrey
-            text: "<center><small>" + i18n.tr("YOUR SCORE") + ":</small> <b>" + game.score + "</b></center>"
+        UbuntuShape {
+            id: logo
+            width: parent.height
+            height: width
+            source: Image {
+                source: header.logo
+            }
         }
-        Button {
-            width: parent.width
-            height: (parent.height - parent.spacing) / 2
-            color: UbuntuColors.warmGrey
-            text: "<center><small>" + i18n.tr("HIGHSCORE") + ":</small> <b>" + game.highscore + "</b></center>"
+
+        Column {
+            id: scores
+            width: parent.width - parent.height - units.gu(1)
+            height: parent.height
+            spacing: units.gu(1)
+
+            Button {
+                width: parent.width
+                height: (parent.height - parent.spacing) / 2
+                color: UbuntuColors.warmGrey
+                text: "<center><small>" + i18n.tr("YOUR SCORE") + ":</small> <b>" + game.score + "</b></center>"
+            }
+            Button {
+                width: parent.width
+                height: (parent.height - parent.spacing) / 2
+                color: UbuntuColors.warmGrey
+                text: "<center><small>" + i18n.tr("HIGHSCORE") + ":</small> <b>" + game.highscore + "</b></center>"
+            }
         }
     }
-}
 }
