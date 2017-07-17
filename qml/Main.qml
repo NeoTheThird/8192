@@ -145,7 +145,7 @@ Window {
                     }
                 }
 
-                Game_8192 {
+                Game {
                     id: game
                     width: gameColumn.width
 
