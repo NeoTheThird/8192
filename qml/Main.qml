@@ -49,7 +49,6 @@ Window {
         anchorToKeyboard: true
         anchors.fill: parent
 
-
         property string version: "0.2"
         property bool activeState: Qt.application.active
         property bool firstStart: true
