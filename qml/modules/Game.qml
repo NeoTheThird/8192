@@ -266,8 +266,7 @@ UbuntuShape {
         columns: app.cols
         spacing: units.gu(1)
 
-        property real cellWidth: (width - (columns - 1) * spacing) / columns
-        property real cellHeight: (height - (rows - 1) * spacing) / rows
+        property real cellOutline: (width - (columns - 1) * spacing) / columns
 
         Repeater {
             id: cells
@@ -293,8 +292,8 @@ UbuntuShape {
             }
 
             UbuntuShape {
-                width: parent.cellWidth
-                height: parent.cellHeight
+                width: parent.cellOutline
+                height: width
                 color: "#F0F0F0"
                 opacity: 0.3
 
