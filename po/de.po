@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-16 14:07+0200\n"
-"PO-Revision-Date: 2017-07-16 14:07+0200\n"
+"POT-Creation-Date: 2017-07-19 01:20+0200\n"
+"PO-Revision-Date: 2017-07-19 01:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -18,64 +18,37 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../qml/Main.qml:79
-msgid "Welcome to 8192"
-msgstr "Willkommen zu 8192"
-
-#: ../qml/Main.qml:123
+#: ../qml/modules/Header.qml:74
 msgid "YOUR SCORE"
 msgstr "SPIELSTAND"
 
-#: ../qml/Main.qml:129
+#: ../qml/modules/Header.qml:91
 msgid "HIGHSCORE"
 msgstr "HIGHSCORE"
 
-#: ../qml/Main.qml:160 ../qml/Main.qml:195 ../qml/Main.qml:228
-#: ../qml/Main.qml:248
+#: ../qml/modules/PopupController.qml:41 ../qml/modules/PopupController.qml:118
+#: ../qml/modules/PopupController.qml:140 ../qml/modules/Footer.qml:60
+#: ../qml/Main.qml:107
 msgid "Restart"
 msgstr "Neustart"
 
-#: ../qml/Main.qml:168
-msgid "About"
-msgstr "Informationen"
-
-#: ../qml/Main.qml:196
+#: ../qml/modules/PopupController.qml:42
 msgid "Are you sure you want to restart the game?"
 msgstr "Bist du sicher, dass du neustarten möchtest?"
 
-#: ../qml/Main.qml:198
+#: ../qml/modules/PopupController.qml:45
 msgid "Yes"
 msgstr "Ja"
 
-#: ../qml/Main.qml:205
+#: ../qml/modules/PopupController.qml:53
 msgid "No"
 msgstr "Nein"
 
-#: ../qml/Main.qml:220
-msgid "Victory"
-msgstr "Gewonnen"
-
-#: ../qml/Main.qml:222
-msgid "Keep going"
-msgstr "Weitermachen"
-
-#: ../qml/Main.qml:244
-msgid "Game over. :("
-msgstr "Game over. :("
-
-#: ../qml/Main.qml:245
-msgid "Score"
-msgstr "Spielstand"
-
-#: ../qml/Main.qml:256
-msgid "Quit"
-msgstr "Beenden"
-
-#: ../qml/Main.qml:273
+#: ../qml/modules/PopupController.qml:71
 msgid "Version"
 msgstr "Version"
 
-#: ../qml/Main.qml:273
+#: ../qml/modules/PopupController.qml:71
 msgid ""
 "This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
 "which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
@@ -88,22 +61,54 @@ msgstr ""
 "treffen solltest, gib ihnen doch bitte einen Kaffee aus, sie haben es "
 "verdient!"
 
-#: ../qml/Main.qml:273
+#: ../qml/modules/PopupController.qml:71
 msgid "Copyright"
 msgstr "Copyright"
 
-#: ../qml/Main.qml:276
+#: ../qml/modules/PopupController.qml:74
 msgid "Donate"
 msgstr "Spenden"
 
-#: ../qml/Main.qml:283
+#: ../qml/modules/PopupController.qml:82
 msgid "Report a bug"
 msgstr "Fehler melden"
 
-#: ../qml/Main.qml:291
+#: ../qml/modules/PopupController.qml:91
 msgid "Close"
 msgstr "Schließen"
 
-#: 8192.desktop.in.h:1
+#: ../qml/modules/PopupController.qml:108
+msgid "Victory"
+msgstr "Gewonnen"
+
+#: ../qml/modules/PopupController.qml:111
+msgid "Keep going"
+msgstr "Weitermachen"
+
+#: ../qml/modules/PopupController.qml:136
+msgid "Game over. :("
+msgstr "Game over. :("
+
+#: ../qml/modules/PopupController.qml:137
+msgid "Score"
+msgstr "Spielstand"
+
+#: ../qml/modules/PopupController.qml:149
+msgid "Quit"
+msgstr "Beenden"
+
+#: ../qml/modules/Footer.qml:78 ../qml/Main.qml:103
+msgid "About"
+msgstr "Informationen"
+
+#: ../qml/Main.qml:35 ../qml/Main.qml:93
+msgid "Welcome to 8192"
+msgstr "Willkommen zu 8192"
+
+#: ../qml/Main.qml:112
+msgid "Undo"
+msgstr "Zurück"
+
+#: 8192.neothethird.desktop.in.h:1
 msgid "8192"
 msgstr "8192"
