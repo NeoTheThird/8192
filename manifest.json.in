@@ -8,7 +8,7 @@
             "desktop":  "8192.neothethird.desktop"
         }
     },
-    "version": "0.2",
+    "version": "0.3",
     "maintainer": "Jan Sprinz <neo@neothethird.de>",
     "framework" : "ubuntu-sdk-15.04.6"
 }
