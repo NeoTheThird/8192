@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192.neothethird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-18 21:48+0000\n"
+"POT-Creation-Date: 2017-07-18 22:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "HIGHSCORE"
 msgstr ""
 
 #: ../qml/modules/Footer.qml:61 ../qml/modules/Footer.qml:69
-#: ../qml/Main.qml:170 ../qml/Main.qml:188
+#: ../qml/Main.qml:181 ../qml/Main.qml:199
 msgid "Restart"
 msgstr ""
 
@@ -74,27 +74,31 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: ../qml/Main.qml:35 ../qml/Main.qml:92
+#: ../qml/Main.qml:35 ../qml/Main.qml:93
 msgid "Welcome to 8192"
 msgstr ""
 
-#: ../qml/Main.qml:160
+#: ../qml/Main.qml:104
+msgid "Undo"
+msgstr ""
+
+#: ../qml/Main.qml:171
 msgid "Victory"
 msgstr ""
 
-#: ../qml/Main.qml:163
+#: ../qml/Main.qml:174
 msgid "Keep going"
 msgstr ""
 
-#: ../qml/Main.qml:184
+#: ../qml/Main.qml:195
 msgid "Game over. :("
 msgstr ""
 
-#: ../qml/Main.qml:185
+#: ../qml/Main.qml:196
 msgid "Score"
 msgstr ""
 
-#: ../qml/Main.qml:197
+#: ../qml/Main.qml:208
 msgid "Quit"
 msgstr ""
 

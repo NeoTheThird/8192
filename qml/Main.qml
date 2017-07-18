@@ -59,6 +59,7 @@ Window {
 
         Component.onDestruction: {
             console.log("8192 closed")
+            game.save()
         }
 
         Settings {
@@ -94,6 +95,16 @@ Window {
                     foregroundColor: UbuntuColors.orange
                     backgroundColor: UbuntuColors.porcelain
                     dividerColor: UbuntuColors.slate
+                }
+                trailingActionBar {
+                    actions: [
+                        Action {
+                            iconName: "undo"
+                            enabled: game.reversible
+                            text: i18n.tr("Undo")
+                            onTriggered: game.load()
+                        }
+                    ]
                 }
             }
 

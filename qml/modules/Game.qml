@@ -41,6 +41,7 @@ UbuntuShape {
     property int score: 0
     property int highscore: 0
     property bool won: false
+    property bool reversible: false
 
     signal victory
     signal defeat
@@ -66,19 +67,23 @@ UbuntuShape {
     function purge() {
         score = 0
         won = false
+        clear()
+        save()
+        new_number()
+        new_number()
+    }
+
+    function clear() {
         var tmp = numbers
         for (var i = 0; i < tmp.length; i++) {
             tmp[i].destroy()
         }
         tmp = new Array()
         numbers = tmp
-        new_number()
-        new_number()
-        console.log("New board")
-        save()
     }
 
     function load() {
+        clear()
         board = JSON.parse(boardString)
         var newNumber
         for (var i = 0; i < board.length; i++) {
@@ -87,6 +92,7 @@ UbuntuShape {
                 numbers.push(newNumber)
             }
         }
+        reversible = false
     }
 
     function save() {
@@ -343,6 +349,8 @@ UbuntuShape {
     }
 
     function move(col, row) {
+        save()
+        reversible = true
         var somethingMoved = false
         var tmp = numbers
         if (col > 0) {
@@ -443,8 +451,6 @@ UbuntuShape {
 
         if (!checkNotStuck()) {
             app.defeat()
-        } else {
-            save()
         }
     }
 }
