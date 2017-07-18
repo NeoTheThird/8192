@@ -25,7 +25,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
 
 UbuntuShape {
     id: footer
@@ -48,7 +47,7 @@ UbuntuShape {
             width: (parent.width - units.gu(1)) / 2
             height: parent.height
             color: "#eee4da"
-            onClicked: PopupUtils.open(restartDiaComponent)
+            onClicked: popupController.restart()
             Label {
                 width: parent.width * 0.9
                 height: parent.height * 0.9
@@ -62,36 +61,11 @@ UbuntuShape {
             }
         }
 
-        Component {
-            id: restartDiaComponent
-            Dialog {
-                id: restartDia
-                title: i18n.tr("Restart")
-                text: i18n.tr("Are you sure you want to restart the game?")
-
-                Button {
-                    text: i18n.tr("Yes")
-                    onClicked: {
-                        game.purge()
-                        PopupUtils.close(restartDia)
-                    }
-                }
-
-                Button {
-                    text: i18n.tr("No")
-                    color: UbuntuColors.warmGrey
-                    onClicked: {
-                        PopupUtils.close(restartDia)
-                    }
-                }
-            }
-        }
-
         Button {
             width: (parent.width - units.gu(1)) / 2
             height: parent.height
             color: "#eee4da"
-            onClicked: PopupUtils.open(aboutDiaComponent)
+            onClicked: popupController.about()
             Label {
                 width: parent.width * 0.9
                 height: parent.height * 0.9
@@ -102,40 +76,6 @@ UbuntuShape {
                 verticalAlignment: Text.AlignVCenter
                 color: "#656565"
                 text: i18n.tr("About")
-            }
-        }
-
-        Component {
-            id: aboutDiaComponent
-            Dialog {
-                id: aboutDia
-                title: "8192"
-                text: "<b>" + i18n.tr("Version") + ":</b> " + mainView.version + "<br><br>" + i18n.tr("This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game and you ever happen to meet them, please consider treating them for a decent cup of coffee, they really deserve it!") + "<br><br><b>"+ i18n.tr("Copyright") + " (c) 2017 Jan Sprinz <br>neo@neothethird.de</b>"
-
-                Button {
-                    text: i18n.tr("Donate")
-                    onClicked: {
-                        Qt.openUrlExternally("https://paypal.me/neothethird")
-                        PopupUtils.close(aboutDia)
-                    }
-                }
-
-                Button {
-                    text: i18n.tr("Report a bug")
-                    color: UbuntuColors.warmGrey
-                    onClicked: {
-                        Qt.openUrlExternally("https://github.com/neothethird/8192/issues")
-                        PopupUtils.close(aboutDia)
-                    }
-                }
-
-                Button {
-                    text: i18n.tr("Close")
-                    color: UbuntuColors.slate
-                    onClicked: {
-                        PopupUtils.close(aboutDia)
-                    }
-                }
             }
         }
     }

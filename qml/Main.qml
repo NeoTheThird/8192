@@ -99,6 +99,14 @@ Window {
                 trailingActionBar {
                     actions: [
                         Action {
+                            iconName: "info"
+                            text: i18n.tr("About")
+                            onTriggered: popupController.about()
+                        }, Action {
+                            iconName: "reload"
+                            text: i18n.tr("Restart")
+                            onTriggered: popupController.restart()
+                        }, Action {
                             iconName: "undo"
                             enabled: game.reversible
                             text: i18n.tr("Undo")
@@ -154,65 +162,14 @@ Window {
                 id: winTimer
                 running: false
                 interval: 300
-                onTriggered: PopupUtils.open(victoryDiaComponent)
+                onTriggered: popupController.victory()
             }
 
             Timer {
                 id: failTimer
                 running: false
                 interval: 600
-                onTriggered: PopupUtils.open(defeatDiaComponent)
-            }
-
-            Component {
-                id: victoryDiaComponent
-                Dialog {
-                    id: victoryDia
-                    title: i18n.tr("Victory")
-
-                    Button {
-                        text: i18n.tr("Keep going")
-                        onClicked: {
-                            PopupUtils.close(victoryDia)
-                        }
-                    }
-
-                    Button {
-                        text: i18n.tr("Restart")
-                        color: UbuntuColors.warmGrey
-                        onClicked: {
-                            game.purge()
-                            PopupUtils.close(victoryDia)
-                        }
-                    }
-                }
-            }
-
-            Component {
-                id: defeatDiaComponent
-                Dialog {
-                    id: defeatDia
-                    title: i18n.tr("Game over. :(")
-                    text: i18n.tr("Score") + ": " + game.score
-
-                    Button {
-                        text: i18n.tr("Restart")
-                        color: UbuntuColors.green
-                        onClicked: {
-                            game.purge()
-                            PopupUtils.close(defeatDia)
-                        }
-                    }
-
-                    Button {
-                        text: i18n.tr("Quit")
-                        color: UbuntuColors.red
-                        onClicked: {
-                            game.purge()
-                            Qt.quit()
-                        }
-                    }
-                }
+                onTriggered: popupController.defeat()
             }
         }
 
@@ -225,6 +182,10 @@ Window {
             game.move(0, -1)
             if (event.key == Qt.Key_Down)
             game.move(0, 1)
+        }
+
+        PopupController {
+            id: popupController
         }
     }
 }

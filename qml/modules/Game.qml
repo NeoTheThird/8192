@@ -67,10 +67,12 @@ UbuntuShape {
     function purge() {
         score = 0
         won = false
+        reversible = false
         clear()
         save()
         new_number()
         new_number()
+        save()
     }
 
     function clear() {

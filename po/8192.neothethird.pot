@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192.neothethird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-18 22:38+0000\n"
+"POT-Creation-Date: 2017-07-18 23:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,32 +25,30 @@ msgstr ""
 msgid "HIGHSCORE"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:61 ../qml/modules/Footer.qml:69
-#: ../qml/Main.qml:181 ../qml/Main.qml:199
+#: ../qml/modules/PopupController.qml:41
+#: ../qml/modules/PopupController.qml:118
+#: ../qml/modules/PopupController.qml:140 ../qml/modules/Footer.qml:60
+#: ../qml/Main.qml:107
 msgid "Restart"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:70
+#: ../qml/modules/PopupController.qml:42
 msgid "Are you sure you want to restart the game?"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:73
+#: ../qml/modules/PopupController.qml:45
 msgid "Yes"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:81
+#: ../qml/modules/PopupController.qml:53
 msgid "No"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:104
-msgid "About"
-msgstr ""
-
-#: ../qml/modules/Footer.qml:113
+#: ../qml/modules/PopupController.qml:71
 msgid "Version"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:113
+#: ../qml/modules/PopupController.qml:71
 msgid ""
 "This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
 "which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
@@ -58,48 +56,52 @@ msgid ""
 "cup of coffee, they really deserve it!"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:113
+#: ../qml/modules/PopupController.qml:71
 msgid "Copyright"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:116
+#: ../qml/modules/PopupController.qml:74
 msgid "Donate"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:124
+#: ../qml/modules/PopupController.qml:82
 msgid "Report a bug"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:133
+#: ../qml/modules/PopupController.qml:91
 msgid "Close"
+msgstr ""
+
+#: ../qml/modules/PopupController.qml:108
+msgid "Victory"
+msgstr ""
+
+#: ../qml/modules/PopupController.qml:111
+msgid "Keep going"
+msgstr ""
+
+#: ../qml/modules/PopupController.qml:136
+msgid "Game over. :("
+msgstr ""
+
+#: ../qml/modules/PopupController.qml:137
+msgid "Score"
+msgstr ""
+
+#: ../qml/modules/PopupController.qml:149
+msgid "Quit"
+msgstr ""
+
+#: ../qml/modules/Footer.qml:78 ../qml/Main.qml:103
+msgid "About"
 msgstr ""
 
 #: ../qml/Main.qml:35 ../qml/Main.qml:93
 msgid "Welcome to 8192"
 msgstr ""
 
-#: ../qml/Main.qml:104
+#: ../qml/Main.qml:112
 msgid "Undo"
-msgstr ""
-
-#: ../qml/Main.qml:171
-msgid "Victory"
-msgstr ""
-
-#: ../qml/Main.qml:174
-msgid "Keep going"
-msgstr ""
-
-#: ../qml/Main.qml:195
-msgid "Game over. :("
-msgstr ""
-
-#: ../qml/Main.qml:196
-msgid "Score"
-msgstr ""
-
-#: ../qml/Main.qml:208
-msgid "Quit"
 msgstr ""
 
 #: 8192.neothethird.desktop.in.h:1
