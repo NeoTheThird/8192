@@ -4,8 +4,8 @@
     "title": "8192",
     "hooks": {
         "8192": {
-            "apparmor": "8192.apparmor",
-            "desktop":  "8192.desktop"
+            "apparmor": "8192.neothethird.apparmor",
+            "desktop":  "8192.neothethird.desktop"
         }
     },
     "version": "0.2",

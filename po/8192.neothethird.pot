@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 8192\n"
+"Project-Id-Version: 8192.neothethird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-18 21:37+0000\n"
+"POT-Creation-Date: 2017-07-18 21:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,6 +98,6 @@ msgstr ""
 msgid "Quit"
 msgstr ""
 
-#: 8192.desktop.in.h:1
+#: 8192.neothethird.desktop.in.h:1
 msgid "8192"
 msgstr ""
