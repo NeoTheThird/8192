@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 8192.neothethird\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-18 23:21+0000\n"
+"POT-Creation-Date: 2017-08-11 21:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/modules/Header.qml:74
-msgid "YOUR SCORE"
-msgstr ""
-
-#: ../qml/modules/Header.qml:91
-msgid "HIGHSCORE"
-msgstr ""
-
-#: ../qml/modules/PopupController.qml:41
+#: ../qml/modules/Footer.qml:60 ../qml/modules/PopupController.qml:41
 #: ../qml/modules/PopupController.qml:118
-#: ../qml/modules/PopupController.qml:140 ../qml/modules/Footer.qml:60
-#: ../qml/Main.qml:107
+#: ../qml/modules/PopupController.qml:140 ../qml/Main.qml:108
 msgid "Restart"
+msgstr ""
+
+#: ../qml/modules/Footer.qml:78 ../qml/Main.qml:104
+msgid "About"
 msgstr ""
 
 #: ../qml/modules/PopupController.qml:42
@@ -92,15 +87,19 @@ msgstr ""
 msgid "Quit"
 msgstr ""
 
-#: ../qml/modules/Footer.qml:78 ../qml/Main.qml:103
-msgid "About"
+#: ../qml/modules/Header.qml:74
+msgid "YOUR SCORE"
 msgstr ""
 
-#: ../qml/Main.qml:35 ../qml/Main.qml:93
+#: ../qml/modules/Header.qml:91
+msgid "HIGHSCORE"
+msgstr ""
+
+#: ../qml/Main.qml:35 ../qml/Main.qml:94
 msgid "Welcome to 8192"
 msgstr ""
 
-#: ../qml/Main.qml:112
+#: ../qml/Main.qml:113
 msgid "Undo"
 msgstr ""
 

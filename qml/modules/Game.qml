@@ -39,6 +39,7 @@ UbuntuShape {
     property int rows: 6
     property int finalValue: 8192
     property int score: 0
+    property int points: 0
     property int highscore: 0
     property bool won: false
     property bool reversible: false
@@ -66,6 +67,7 @@ UbuntuShape {
 
     function purge() {
         score = 0
+        points = 0
         won = false
         reversible = false
         clear()
@@ -94,6 +96,8 @@ UbuntuShape {
                 numbers.push(newNumber)
             }
         }
+        score -= points
+        points = 0
         reversible = false
     }
 
@@ -172,7 +176,8 @@ UbuntuShape {
                 return false
                 if (app.getNumber(h, v)) {
                     number += app.getNumber(h, v).number
-                    app.score += number
+                    app.points = number
+                    app.score += points
                     if (number == finalValue && !won) {
                         won = true
                         app.victory()

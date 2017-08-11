@@ -79,6 +79,7 @@ Window {
             property alias cols: game.cols
             property alias rows: game.rows
             property alias score: game.score
+            property alias points: game.points
             property alias highscore: game.highscore
             property alias won: game.won
         }
