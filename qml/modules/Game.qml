@@ -176,8 +176,7 @@ UbuntuShape {
                 return false
                 if (app.getNumber(h, v)) {
                     number += app.getNumber(h, v).number
-                    app.points = number
-                    app.score += points
+                    app.score += number
                     if (number == finalValue && !won) {
                         won = true
                         app.victory()
@@ -358,6 +357,7 @@ UbuntuShape {
     function move(col, row) {
         save()
         reversible = true
+        var scoreBefore = app.score
         var somethingMoved = false
         var tmp = numbers
         if (col > 0) {
@@ -371,8 +371,7 @@ UbuntuShape {
                                 canMerge = false
                                 filled--
                             }
-                        }
-                        else {
+                        } else {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(app.cols-1-filled,j))
@@ -394,8 +393,7 @@ UbuntuShape {
                                 canMerge = false
                                 filled--
                             }
-                        }
-                        else {
+                        } else {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(filled,j))
@@ -417,8 +415,7 @@ UbuntuShape {
                                 canMerge = false
                                 filled--
                             }
-                        }
-                        else {
+                        } else {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(i,app.rows-1-filled))
@@ -440,8 +437,7 @@ UbuntuShape {
                                 canMerge = false
                                 filled--
                             }
-                        }
-                        else {
+                        } else {
                             canMerge = true
                         }
                         if (getNumber(i,j).move(i,filled))
@@ -459,5 +455,6 @@ UbuntuShape {
         if (!checkNotStuck()) {
             app.defeat()
         }
+        points = app.score - scoreBefore
     }
 }
