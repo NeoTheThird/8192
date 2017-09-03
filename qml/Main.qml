@@ -53,15 +53,6 @@ Window {
         property bool activeState: Qt.application.active
         property bool firstStart: true
 
-        Component.onCompleted: {
-            console.log("8192 started")
-        }
-
-        Component.onDestruction: {
-            console.log("8192 closed")
-            game.save()
-        }
-
         Settings {
             category: "General"
             property alias firstStart: mainView.firstStart
