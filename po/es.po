@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 8192\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-17 02:35+0200\n"
+"PO-Revision-Date: 2017-09-16 17:54+0200\n"
+
+"Last-Translator: advocatux <advocatux@airpost.net>\n"
+"Language-Team: UBports Spanish Team\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: handmade for you\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../qml/Main.qml:93
+msgid "Welcome to 8192"
+msgstr "Bienvenido a 8192"
+
+#: ../qml/Main.qml:137
+msgid "YOUR SCORE"
+msgstr "SU PUNTUACIÓN"
+
+#: ../qml/Main.qml:143
+msgid "HIGHSCORE"
+msgstr "RECORD"
+
+#: ../qml/Main.qml:173 ../qml/Main.qml:208 ../qml/Main.qml:241
+#: ../qml/Main.qml:261
+msgid "Restart"
+msgstr "Reiniciar"
+
+#: ../qml/Main.qml:181
+msgid "About"
+msgstr "Acerca de"
+
+#: ../qml/Main.qml:209
+msgid "Are you sure you want to restart the game?"
+msgstr "¿Seguro que desea reiniciar el juego?"
+
+#: ../qml/Main.qml:211
+msgid "Yes"
+msgstr "Si"
+
+#: ../qml/Main.qml:218
+msgid "No"
+msgstr "No"
+
+#: ../qml/Main.qml:233
+msgid "Victory"
+msgstr "Victoria"
+
+#: ../qml/Main.qml:235
+msgid "Keep going"
+msgstr "Continuar"
+
+#: ../qml/Main.qml:257
+msgid "Game over. :("
+msgstr "Juego terminado. :("
+
+#: ../qml/Main.qml:258
+msgid "Score"
+msgstr "Puntuación"
+
+#: ../qml/Main.qml:269
+msgid "Quit"
+msgstr "Salir"
+
+#: ../qml/Main.qml:286
+msgid "Version"
+msgstr "Versión"
+
+#: ../qml/Main.qml:286
+msgid ""
+"This game was shamelessly ripped of from Gabriele Cirulli's game \"2048\", "
+"which was inspired by Jason Saxon's game \"1024!\". If you enjoy this game "
+"and you ever happen to meet them, please consider treating them for a decent "
+"cup of coffee, they really deserve it!"
+
+msgstr ""
+"Este juego ha fusilado descaradamente el juego \"2048\" de Gabriele Cirulli, "
+"que se inspiró en el juego \"1024!\" de Jason Saxon. Si disfruta con el juego "
+"y alguna vez se encuentra con ellos, considere invitarlos a una buena "
+"taza de café, ¡realmente se lo merecen! "
+
+#: ../qml/Main.qml:286
+msgid "Copyright"
+msgstr "Copyright"
+
+#: ../qml/Main.qml:289
+msgid "Donate"
+msgstr "Donar"
+
+#: ../qml/Main.qml:296
+msgid "Report a bug"
+msgstr "Informar de un error"
+
+#: ../qml/Main.qml:304
+msgid "Close"
+msgstr "Cerrar"
+
+#: 8192.desktop.in.h:1
+msgid "8192"
+msgstr "8192"
